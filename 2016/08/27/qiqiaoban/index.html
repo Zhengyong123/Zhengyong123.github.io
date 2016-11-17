@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016/8 | 剑出花残</title>
+  <title>canvas绘制七巧板 | 剑出花残</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,96 +191,86 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/27/qiqiaoban/">canvas绘制七巧板</a></h4>
-                            
-                            <p><time datetime="2016-08-27T11:08:15.000Z"><a href="/2016/08/27/qiqiaoban/">2016-08-27</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/20/canvas/">canvas基础使用</a></h4>
-                            
-                            <p><time datetime="2016-08-20T09:26:50.000Z"><a href="/2016/08/20/canvas/">2016-08-20</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/16/this/">this对象</a></h4>
-                            
-                            <p><time datetime="2016-08-16T06:06:38.000Z"><a href="/2016/08/16/this/">2016-08-16</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/08/clss/">Javascript定义类（class）的三种方法</a></h4>
-                            
-                            <p><time datetime="2016-08-08T11:57:46.000Z"><a href="/2016/08/08/clss/">2016-08-08</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-08-27T11:08:15.000Z" itemprop="datePublished">
+          2016-08-27
+      </time>
+    
+</span>
+                <h1>canvas绘制七巧板</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;canvas width=&quot;800&quot; height=&quot;800&quot; id=&quot;canvas&quot; style=&quot;display:block;border:1px solid #000;&quot;&gt;</div><div class="line">		不支持</div><div class="line">	&lt;/canvas&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><p>```<script type="text/javascript"><br>    var canvas = document.querySelector(“#canvas”);<br>    var context = canvas.getContext(‘2d’);<br>    var xian =[<br>            {a:[{x:0,y:0},{x:400,y:400},{x:0,y:800}],color:”red”},<br>            {a:[{x:0,y:0},{x:400,y:400},{x:800,y:0}],color:”green”},<br>            {a:[{x:800,y:0},{x:800,y:400},{x:600,y:600},{x:600,y:200}],color:”#ef3d61”},<br>            {a:[{x:600,y:200},{x:600,y:600},{x:400,y:400}],color:”#f9f51a”},<br>            {a:[{x:400,y:400},{x:600,y:600},{x:400,y:800},{x:200,y:600}],color:”#a54c09”},<br>               {a:[{x:200,y:600},{x:400,y:800},{x:0,y:800}],color:”#fa8ccc”},<br>            {a:[{x:800,y:400},{x:800,y:800},{x:400,y:800}],color:”#f6ca29”}<br>        ];</p>
+<pre><code>    //第一种方法
+// for(var i = 0;i&lt;xian.length;i++){
+//     context.beginPath();
+//     context.moveTo(xian[i].a[0].x,xian[i].a[0].y);
+//     for (var j = 0; j &lt; xian[i].a.length; j++) {
+//         context.lineTo(xian[i].a[j].x,xian[i].a[j].y);
+//     }
+//     context.closePath();
+//     context.fillStyle = xian[i].color;
+//     context.stroke();
+//     context.fill();
+// }
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>光荣在于平淡，艰巨在于漫长。</p>
+
+//第二种方法
+for (var i = 0; i &lt; xian.length; i++) {
+    dian(xian[i]);
+};
+
+function dian (item) {
+    context.beginPath(); 
+    context.moveTo(item.a[0].x,item.a[0].y);
+      for (var i = 1; i &lt; item.a.length; i++) {
+        context.lineTo(item.a[i].x,item.a[i].y); 
+    };
+
+    context.fillStyle = item.color;
+    context.closePath();
+    context.stroke();
+    context.fill(); 
+}
+</code></pre><p></script></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/08/20/canvas/">
+        canvas基础使用 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/08/27/qiqiaoban/" data-title="canvas绘制七巧板" data-url="http://yoursite.com/2016/08/27/qiqiaoban/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

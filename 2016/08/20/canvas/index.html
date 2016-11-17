@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016/8 | 剑出花残</title>
+  <title>canvas基础使用 | 剑出花残</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,96 +191,57 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/27/qiqiaoban/">canvas绘制七巧板</a></h4>
-                            
-                            <p><time datetime="2016-08-27T11:08:15.000Z"><a href="/2016/08/27/qiqiaoban/">2016-08-27</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/20/canvas/">canvas基础使用</a></h4>
-                            
-                            <p><time datetime="2016-08-20T09:26:50.000Z"><a href="/2016/08/20/canvas/">2016-08-20</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/16/this/">this对象</a></h4>
-                            
-                            <p><time datetime="2016-08-16T06:06:38.000Z"><a href="/2016/08/16/this/">2016-08-16</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/08/clss/">Javascript定义类（class）的三种方法</a></h4>
-                            
-                            <p><time datetime="2016-08-08T11:57:46.000Z"><a href="/2016/08/08/clss/">2016-08-08</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-08-20T09:26:50.000Z" itemprop="datePublished">
+          2016-08-20
+      </time>
+    
+</span>
+                <h1>canvas基础使用</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;title&gt;&lt;/title&gt;</div><div class="line">	&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">		#canvas&#123;</div><div class="line">			display: block;</div><div class="line">			margin: 0 auto;</div><div class="line">			box-shadow: 3px 3px 3px ;</div><div class="line">		&#125;</div><div class="line">		#can&#123;</div><div class="line">			display: block;</div><div class="line">			border:1px #000 solid;</div><div class="line">		&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;canvas id=&quot;canvas&quot;&gt;</div><div class="line">		你的浏览器不支持canvas</div><div class="line">	&lt;/canvas&gt;	</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">	// 1.获取canvas元素</div><div class="line">	var canvas = document.querySelector(&quot;#canvas&quot;);</div><div class="line">	canvas.width=400;</div><div class="line">	canvas.height=400;</div><div class="line"></div><div class="line">	// 2.定义画图环境</div><div class="line">	var context = canvas.getContext(&quot;2d&quot;);</div><div class="line"></div><div class="line">	// 3.画线条</div><div class="line">	// moveTo(x,y) 定义线条的起点位置</div><div class="line">	// lineTo(x,y) 定义线条的终点位置</div><div class="line">	context.beginPath();</div><div class="line">	context.moveTo(100,100);</div><div class="line">	context.lineTo(300,300);</div><div class="line">	context.lineTo(100,300);</div><div class="line">	context.lineTo(100,100);</div><div class="line">	// stroke() 开始绘画</div><div class="line">	context.stroke();</div><div class="line">	// lineWidth 线条宽度</div><div class="line">	// strokeStyle 线条的样式</div><div class="line">	// fillStyle  填充</div><div class="line">	// beginPath  开始一个新的路径</div><div class="line">	// closePath  关闭这个路径</div><div class="line">	context.fillStyle = &quot;red&quot;;</div><div class="line">	context.fill();</div><div class="line">	context.closePath();</div><div class="line">	</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/08/27/qiqiaoban/" style="float: left;">
+        ← canvas绘制七巧板
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/08/16/this/">
+        this对象 →
+    </a>
+    
+</nav>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>光荣在于平淡，艰巨在于漫长。</p>
-        </div>
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/08/20/canvas/" data-title="canvas基础使用" data-url="http://yoursite.com/2016/08/20/canvas/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
