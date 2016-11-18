@@ -207,39 +207,8 @@
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;canvas width=&quot;800&quot; height=&quot;800&quot; id=&quot;canvas&quot; style=&quot;display:block;border:1px solid #000;&quot;&gt;</div><div class="line">		不支持</div><div class="line">	&lt;/canvas&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><p>```<script type="text/javascript"><br>    var canvas = document.querySelector(“#canvas”);<br>    var context = canvas.getContext(‘2d’);<br>    var xian =[<br>            {a:[{x:0,y:0},{x:400,y:400},{x:0,y:800}],color:”red”},<br>            {a:[{x:0,y:0},{x:400,y:400},{x:800,y:0}],color:”green”},<br>            {a:[{x:800,y:0},{x:800,y:400},{x:600,y:600},{x:600,y:200}],color:”#ef3d61”},<br>            {a:[{x:600,y:200},{x:600,y:600},{x:400,y:400}],color:”#f9f51a”},<br>            {a:[{x:400,y:400},{x:600,y:600},{x:400,y:800},{x:200,y:600}],color:”#a54c09”},<br>               {a:[{x:200,y:600},{x:400,y:800},{x:0,y:800}],color:”#fa8ccc”},<br>            {a:[{x:800,y:400},{x:800,y:800},{x:400,y:800}],color:”#f6ca29”}<br>        ];</p>
-<pre><code>    //第一种方法
-// for(var i = 0;i&lt;xian.length;i++){
-//     context.beginPath();
-//     context.moveTo(xian[i].a[0].x,xian[i].a[0].y);
-//     for (var j = 0; j &lt; xian[i].a.length; j++) {
-//         context.lineTo(xian[i].a[j].x,xian[i].a[j].y);
-//     }
-//     context.closePath();
-//     context.fillStyle = xian[i].color;
-//     context.stroke();
-//     context.fill();
-// }
-
-
-//第二种方法
-for (var i = 0; i &lt; xian.length; i++) {
-    dian(xian[i]);
-};
-
-function dian (item) {
-    context.beginPath(); 
-    context.moveTo(item.a[0].x,item.a[0].y);
-      for (var i = 1; i &lt; item.a.length; i++) {
-        context.lineTo(item.a[i].x,item.a[i].y); 
-    };
-
-    context.fillStyle = item.color;
-    context.closePath();
-    context.stroke();
-    context.fill(); 
-}
-</code></pre><p></script></p>
+<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">var canvas = document.querySelector(&quot;#canvas&quot;);</div><div class="line">var context = canvas.getContext(&apos;2d&apos;);</div><div class="line">var xian =[</div><div class="line">		&#123;a:[&#123;x:0,y:0&#125;,&#123;x:400,y:400&#125;,&#123;x:0,y:800&#125;],color:&quot;red&quot;&#125;,</div><div class="line">		&#123;a:[&#123;x:0,y:0&#125;,&#123;x:400,y:400&#125;,&#123;x:800,y:0&#125;],color:&quot;green&quot;&#125;,</div><div class="line">		&#123;a:[&#123;x:800,y:0&#125;,&#123;x:800,y:400&#125;,&#123;x:600,y:600&#125;,&#123;x:600,y:200&#125;],color:&quot;#ef3d61&quot;&#125;,</div><div class="line">    	&#123;a:[&#123;x:600,y:200&#125;,&#123;x:600,y:600&#125;,&#123;x:400,y:400&#125;],color:&quot;#f9f51a&quot;&#125;,</div><div class="line">    	&#123;a:[&#123;x:400,y:400&#125;,&#123;x:600,y:600&#125;,&#123;x:400,y:800&#125;,&#123;x:200,y:600&#125;],color:&quot;#a54c09&quot;&#125;,</div><div class="line">   		&#123;a:[&#123;x:200,y:600&#125;,&#123;x:400,y:800&#125;,&#123;x:0,y:800&#125;],color:&quot;#fa8ccc&quot;&#125;,</div><div class="line">    	&#123;a:[&#123;x:800,y:400&#125;,&#123;x:800,y:800&#125;,&#123;x:400,y:800&#125;],color:&quot;#f6ca29&quot;&#125;</div><div class="line">	];</div><div class="line"></div><div class="line">	//第一种方法</div><div class="line">// for(var i = 0;i&lt;xian.length;i++)&#123;</div><div class="line">// 	context.beginPath();</div><div class="line">// 	context.moveTo(xian[i].a[0].x,xian[i].a[0].y);</div><div class="line">// 	for (var j = 0; j &lt; xian[i].a.length; j++) &#123;</div><div class="line">// 		context.lineTo(xian[i].a[j].x,xian[i].a[j].y);</div><div class="line">// 	&#125;</div><div class="line">// 	context.closePath();</div><div class="line">// 	context.fillStyle = xian[i].color;</div><div class="line">// 	context.stroke();</div><div class="line">// 	context.fill();</div><div class="line">// &#125;</div><div class="line"></div><div class="line"></div><div class="line">//第二种方法</div><div class="line">for (var i = 0; i &lt; xian.length; i++) &#123;</div><div class="line">       dian(xian[i]);</div><div class="line">   &#125;;</div><div class="line"></div><div class="line">function dian (item) &#123;</div><div class="line">       context.beginPath(); </div><div class="line">       context.moveTo(item.a[0].x,item.a[0].y);</div><div class="line">     	for (var i = 1; i &lt; item.a.length; i++) &#123;</div><div class="line">           context.lineTo(item.a[i].x,item.a[i].y); </div><div class="line">       &#125;;</div><div class="line">         </div><div class="line">       context.fillStyle = item.color;</div><div class="line">       context.closePath();</div><div class="line">       context.stroke();</div><div class="line">       context.fill(); </div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
