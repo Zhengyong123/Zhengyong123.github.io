@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016 | 剑出花残</title>
+  <title>var | 剑出花残</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,108 +191,60 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/26/xy/">client offset screen 的区别</a></h4>
-                            
-                            <p><time datetime="2016-08-26T02:44:17.000Z"><a href="/2016/08/26/xy/">2016-08-26</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/20/var/">var</a></h4>
-                            
-                            <p><time datetime="2016-08-20T01:43:06.000Z"><a href="/2016/08/20/var/">2016-08-20</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/12/daidai/">呆呆</a></h4>
-                            
-                            <p><time datetime="2016-08-12T12:36:21.000Z"><a href="/2016/08/12/daidai/">2016-08-12</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/10/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2016-08-10T09:52:23.000Z"><a href="/2016/08/10/hello-world/">2016-08-10</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/08/clss/">Javascript定义类（class）的三种方法</a></h4>
-                            
-                            <p><time datetime="2016-08-08T11:57:46.000Z"><a href="/2016/08/08/clss/">2016-08-08</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-08-20T01:43:06.000Z" itemprop="datePublished">
+          2016-08-20
+      </time>
+    
+</span>
+                <h1>var</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="js中const-var-let区别"><a href="#js中const-var-let区别" class="headerlink" title="js中const,var,let区别"></a>js中const,var,let区别</h2><p></p><p>今天第一次遇到const定义的变量，查阅了相关资料整理了这篇文章。主要内容是：js中三种定义变量的方式const， var， let的区别。</p><p></p>
+<p></p><p>1.const定义的变量不可以修改，而且必须初始化。</p><br><figure class="highlight plain"><figcaption><span>const b = 2;//正确</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">2 // const b;//错误，必须初始化 </div><div class="line">3 console.log(&apos;函数外const定义b：&apos; + b);//有输出值</div><div class="line">4 // b = 5;</div><div class="line">5 // console.log(&apos;函数外修改const定义b：&apos; + b);//无法输出</div></pre></td></tr></table></figure><p></p>
+<p></p><p>2.var定义的变量可以修改，如果不初始化会输出undefined，不会报错.</p><br><figure class="highlight plain"><figcaption><span>var a = 1;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">2 // var a;//不会报错</div><div class="line">3 console.log(&apos;函数外var定义a：&apos; + a);//可以输出a=1</div><div class="line">4 function change()&#123;</div><div class="line">5 a = 4;</div><div class="line">6 console.log(&apos;函数内var定义a：&apos; + a);//可以输出a=4</div><div class="line">7 &#125; </div><div class="line">8 change();</div><div class="line">9 console.log(&apos;函数调用后var定义a为函数内部修改值：&apos; + a);//可以输出a=4</div></pre></td></tr></table></figure><p></p>
+<p></p><p>3.let是块级作用域，函数内部使用let定义后，对函数外部无影响.</p><br><figure class="highlight plain"><figcaption><span>let c = 3;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">2 console.log(&apos;函数外let定义c：&apos; + c);//输出c=3</div><div class="line">3 function change()&#123;</div><div class="line">4 let c = 6;</div><div class="line">5 console.log(&apos;函数内let定义c：&apos; + c);//输出c=6</div><div class="line">6 &#125; </div><div class="line">7 change();</div><div class="line">8 console.log(&apos;函数调用后let定义c不受函数内部定义影响：&apos; + c);//输出c=3</div></pre></td></tr></table></figure><p></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>光荣在于平淡，艰巨在于漫长。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/08/26/xy/" style="float: left;">
+        ← client offset screen 的区别
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/08/12/daidai/">
+        呆呆 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/08/20/var/" data-title="var" data-url="http://yoursite.com/2016/08/20/var/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

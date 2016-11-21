@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>canvas动画时钟 | 剑出花残</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="剑出花残">
+    <meta name="author" content="JC">
+    <meta name="description" content="come on" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="剑出花残" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">剑出花残</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-10-15T06:10:24.000Z" itemprop="datePublished">
+          2016-10-15
+      </time>
+    
+</span>
+                <h1>canvas动画时钟</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>开始用canvas实现这个逼格满满的时钟吧。在html代码中插入canvas标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;400&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;</div></pre></td></tr></table></figure></p>
+<p>设置好css样式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">html, body &#123;</div><div class="line">   width: 100%;</div><div class="line">   height: 100%;</div><div class="line">   margin: 0;</div><div class="line"> &#125;</div><div class="line"> canvas &#123;</div><div class="line">   border: 1px solid #eee;</div><div class="line">   position: relative;</div><div class="line">   left: 50%;</div><div class="line">   top: 50%;</div><div class="line">   transform: translate(-50%, -50%);</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>在js文件中创建画布。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function clock() &#123;</div><div class="line">  var ctx = document.getElementById(&apos;canvas&apos;).getContext(&apos;2d&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>先来绘制时钟表盘，我们看到这张图是带有光线阴影效果的，画成一样难度太高。于是就用颜色的渐变来让时钟看起来稍微立体一点。在canvas中用createLinearGradient来创建一个新的渐变，并用addColorStop上色，最后把颜色赋给strokeStyle。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//绘制表盘底色</div><div class="line">ctx.translate(200, 200); //将坐标原点移到画布中心</div><div class="line">ctx.rotate(-Math.PI/2); //将坐标轴逆时针旋转90度，x轴正方向对准12点方向</div><div class="line">var lingrad = ctx.createLinearGradient(150, 0, -150, 0);</div><div class="line">lingrad.addColorStop(0, &apos;#242f37&apos;);</div><div class="line">lingrad.addColorStop(1, &apos;#48585c&apos;);</div><div class="line">ctx.fillStyle = lingrad;</div><div class="line">ctx.beginPath();</div><div class="line">ctx.arc(0, 0, 150, 0, Math.PI * 2, true);</div><div class="line">ctx.fill();</div></pre></td></tr></table></figure></p>
+<p>比较关键的一点是画布的坐标轴x轴正方向是时钟3点钟方向，为了方便起见，我们把它逆时针旋转90度让它指向十二点钟方向。</p>
+<p>绘制刻度要用到旋转rotate，小时刻度有12个，相邻两个刻度与圆心连线的角度就是Math.PI/6，这里用的是弧度表示，也就是30度。那么我们就用for循环来画出小时的刻度。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">for (var i = 0; i &lt; 12; i++) &#123;</div><div class="line">  ctx.beginPath();</div><div class="line">  ctx.strokeStyle = &apos;#fff&apos;;</div><div class="line">  ctx.lineWidth = 3;</div><div class="line">  ctx.rotate(Math.PI / 6);</div><div class="line">  ctx.moveTo(140, 0);</div><div class="line">  ctx.lineTo(120, 0);</div><div class="line">  ctx.stroke();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>同理，分钟的刻度也一样。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">ctx.beginPath();</div><div class="line">for (i = 0; i &lt; 60; i++) &#123;</div><div class="line">  if (i % 5 !== 0) &#123; //去掉与小时刻度重叠的部分</div><div class="line">    ctx.beginPath();</div><div class="line">    ctx.strokeStyle = &apos;#536b7a&apos;;</div><div class="line">    ctx.lineWidth = 2;</div><div class="line">    ctx.moveTo(140, 0);</div><div class="line">    ctx.lineTo(130, 0);</div><div class="line">    ctx.stroke();</div><div class="line">  &#125;</div><div class="line">  ctx.rotate(Math.PI / 30);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>表盘大致画好了，刻度也画好了，接下来就是绘制指针并让它指向正确的时间，是不是？不就就是画一条直线么。关键是指针rotate的角度是多少呢？其实也是比较简单的。先获取当前的时间，把小时转换为12小时制的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var now = new Date(),</div><div class="line">    sec = now.getSeconds(),</div><div class="line">    min = now.getMinutes(),</div><div class="line">    hr = now.getHours();</div><div class="line">hr = hr &gt; 12 ? hr - 12 : hr;</div></pre></td></tr></table></figure></p>
+<p>那么，时针的位置就是（相对于x轴正方向转过的角度）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.rotate(hr * (Math.PI / 6) + min * (Math.PI / 360) + sec * (Math.PI / 21600));</div></pre></td></tr></table></figure></p>
+<p>同理，分针和秒针的位置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ctx.rotate(min * (Math.PI / 30) + sec * (Math.PI/1800)); //分针</div><div class="line">ctx.rotate(sec * (Math.PI /30)); //秒针</div></pre></td></tr></table></figure></p>
+<p>最后，最关键的让指针转动起来，这里要用到的是requestAnimationFrame方法，用来重绘页面，得到连贯逐帧的动画，实现最佳的动画效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.requestAnimationFrame(callback);</div></pre></td></tr></table></figure></p>
+<p>这个callback就是我们的绘制时钟的clock()函数。需要注意的是每次执行完requestAnimationFrame后需要清除画布，不然出现重叠交错的现象，我们把它放在clock函数开始的地方。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.clearRect(0, 0, canvas.width, canvas.height);</div></pre></td></tr></table></figure></p>
+<p>码整齐的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div></pre></td><td class="code"><pre><div class="line">(function clock() &#123;</div><div class="line">     var ctx = document.getElementById(&apos;canvas&apos;).getContext(&apos;2d&apos;);</div><div class="line">     var now = new Date(),</div><div class="line">         sec = now.getSeconds(),</div><div class="line">         min = now.getMinutes(),</div><div class="line">         hr = now.getHours();</div><div class="line">     hr = hr &gt; 12 ? hr - 12 : hr;</div><div class="line"></div><div class="line">     //绘制表盘底色</div><div class="line">     ctx.save();</div><div class="line">     ctx.clearRect(0, 0, 400, 400);</div><div class="line">     ctx.translate(200, 200);</div><div class="line">     ctx.rotate(-Math.PI/2); //将坐标轴逆时针旋转90度，x轴正方向对准12点方向</div><div class="line">     var lingrad = ctx.createLinearGradient(150, 0, -150, 0);</div><div class="line">     lingrad.addColorStop(0, &apos;#242f37&apos;);</div><div class="line">     lingrad.addColorStop(1, &apos;#48585c&apos;);</div><div class="line">     ctx.fillStyle = lingrad;</div><div class="line">     ctx.beginPath();</div><div class="line">     ctx.arc(0, 0, 150, 0, Math.PI * 2, true);</div><div class="line">     ctx.fill();</div><div class="line"></div><div class="line">     //小时刻度</div><div class="line">     ctx.save();</div><div class="line">     for (var i = 0; i &lt; 12; i++) &#123;</div><div class="line">       ctx.beginPath();</div><div class="line">       ctx.strokeStyle = &apos;#fff&apos;;</div><div class="line">       ctx.lineWidth = 3;</div><div class="line">       ctx.rotate(Math.PI / 6);</div><div class="line">       ctx.moveTo(140, 0);</div><div class="line">       ctx.lineTo(120, 0);</div><div class="line">       ctx.stroke();</div><div class="line">     &#125;</div><div class="line">     ctx.restore();</div><div class="line"></div><div class="line">     //分钟刻度</div><div class="line">     ctx.save();</div><div class="line">     ctx.beginPath();</div><div class="line">     for (i = 0; i &lt; 60; i++) &#123;</div><div class="line">       if (i % 5 !== 0) &#123;</div><div class="line">         ctx.beginPath();</div><div class="line">         ctx.strokeStyle = &apos;#536b7a&apos;;</div><div class="line">         ctx.lineWidth = 2;</div><div class="line">         ctx.moveTo(140, 0);</div><div class="line">         ctx.lineTo(130, 0);</div><div class="line">         ctx.stroke();</div><div class="line">       &#125;</div><div class="line">       ctx.rotate(Math.PI / 30);</div><div class="line">     &#125;</div><div class="line">     ctx.restore();</div><div class="line"></div><div class="line">     //时间文字</div><div class="line">     ctx.save();</div><div class="line">     ctx.rotate(Math.PI/2);</div><div class="line">     ctx.beginPath();</div><div class="line">     ctx.fillStyle = &apos;#58717e&apos;;</div><div class="line">     ctx.font = &apos;32px Microsoft yahei&apos;;</div><div class="line">     ctx.textAlign = &apos;center&apos;;</div><div class="line">     ctx.textBaseline = &apos;middle&apos;;</div><div class="line">     ctx.fillText(&apos;3&apos;, 100, 0);</div><div class="line">     ctx.fillText(&apos;6&apos;, 0, 100);</div><div class="line">     ctx.fillText(&apos;9&apos;, -100, 0);</div><div class="line">     ctx.fillText(&apos;12&apos;, 0, -100);</div><div class="line">     ctx.restore();</div><div class="line"></div><div class="line">     //时针</div><div class="line">     ctx.save();</div><div class="line">     ctx.rotate(hr * (Math.PI / 6) + min * (Math.PI / 360) + sec * (Math.PI / 21600));</div><div class="line">     ctx.lineWidth = 10;</div><div class="line">     ctx.strokeStyle = &apos;#fff&apos;;</div><div class="line">     ctx.beginPath();</div><div class="line">     ctx.moveTo(0, 0);</div><div class="line">     ctx.lineTo(110, 0);</div><div class="line">     ctx.stroke();</div><div class="line">     ctx.fillStyle = &apos;#34434c&apos;;</div><div class="line">     ctx.arc(102, 0, 3, 0, Math.PI * 2, true);</div><div class="line">     ctx.fill();</div><div class="line">     ctx.restore();</div><div class="line"></div><div class="line">     //分针</div><div class="line">     ctx.save();</div><div class="line">     ctx.rotate(min * (Math.PI / 30) + sec * (Math.PI/1800));</div><div class="line">     ctx.lineWidth = 6;</div><div class="line">     ctx.strokeStyle = &apos;#fff&apos;;</div><div class="line">     ctx.beginPath();</div><div class="line">     ctx.moveTo(0, 0);</div><div class="line">     ctx.lineTo(135, 0);</div><div class="line">     ctx.stroke();</div><div class="line"></div><div class="line">     ctx.lineWidth = 3;</div><div class="line">     ctx.strokeStyle = &apos;#34434c&apos;;</div><div class="line">     ctx.beginPath();</div><div class="line">     ctx.moveTo(130, 0);</div><div class="line">     ctx.lineTo(115, 0);</div><div class="line">     ctx.stroke();</div><div class="line">     ctx.restore();</div><div class="line"></div><div class="line">     //秒针</div><div class="line">     ctx.save();</div><div class="line">     ctx.rotate(sec * (Math.PI /30));</div><div class="line">     ctx.beginPath();</div><div class="line">     ctx.lineWidth = 4;</div><div class="line">     ctx.strokeStyle = &apos;#fff&apos;;</div><div class="line">     ctx.moveTo(0, 0);</div><div class="line">     ctx.lineTo(141, 0);</div><div class="line">     ctx.stroke();</div><div class="line"></div><div class="line">     ctx.beginPath();</div><div class="line">     ctx.lineWidth = 12;</div><div class="line">     ctx.strokeStyle = &apos;#fff&apos;;</div><div class="line">     ctx.moveTo(0, 0);</div><div class="line">     ctx.lineTo(-38, 0);</div><div class="line">     ctx.stroke();</div><div class="line"></div><div class="line">     ctx.beginPath();</div><div class="line">     ctx.fillStyle = &apos;#fff&apos;;</div><div class="line">     ctx.arc(0, 0, 15, 0, Math.PI * 2, true);</div><div class="line">     ctx.fill();</div><div class="line"></div><div class="line">     ctx.beginPath();</div><div class="line">     ctx.strokeStyle = &apos;#cdd2d5&apos;;</div><div class="line">     ctx.lineWidth = 1;</div><div class="line">     ctx.arc(0, 0, 8, 0, Math.PI * 2, true);</div><div class="line">     ctx.stroke();</div><div class="line">     ctx.restore();</div><div class="line"></div><div class="line">     //边框</div><div class="line">     ctx.beginPath();</div><div class="line">     ctx.lineWidth = 7;</div><div class="line">     var lingrad2 = ctx.createLinearGradient(150, 0, -150, 0);</div><div class="line">     lingrad2.addColorStop(0, &apos;#adb9c5&apos;);</div><div class="line">     lingrad2.addColorStop(1, &apos;#e9eced&apos;);</div><div class="line">     ctx.strokeStyle = lingrad2;</div><div class="line">     ctx.arc(0,0,152,0,Math.PI*2,true);</div><div class="line">     ctx.stroke();</div><div class="line">     ctx.restore();</div><div class="line"></div><div class="line">     window.requestAnimationFrame(clock);</div><div class="line">   &#125;)();</div></pre></td></tr></table></figure></p>
+<p>转载-&gt;<a href="https://segmentfault.com/a/1190000007405217" target="_blank" rel="external">https://segmentfault.com/a/1190000007405217</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/10/10/javascript/">
+        JavaScript奇技淫巧44招 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/10/15/canvasClock/" data-title="canvas动画时钟" data-url="http://yoursite.com/2016/10/15/canvasClock/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By JC. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

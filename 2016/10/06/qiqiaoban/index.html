@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016 | 剑出花残</title>
+  <title>canvas绘制七巧板 | 剑出花残</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,108 +191,59 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/26/xy/">client offset screen 的区别</a></h4>
-                            
-                            <p><time datetime="2016-08-26T02:44:17.000Z"><a href="/2016/08/26/xy/">2016-08-26</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/20/var/">var</a></h4>
-                            
-                            <p><time datetime="2016-08-20T01:43:06.000Z"><a href="/2016/08/20/var/">2016-08-20</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/12/daidai/">呆呆</a></h4>
-                            
-                            <p><time datetime="2016-08-12T12:36:21.000Z"><a href="/2016/08/12/daidai/">2016-08-12</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/10/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2016-08-10T09:52:23.000Z"><a href="/2016/08/10/hello-world/">2016-08-10</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/08/08/clss/">Javascript定义类（class）的三种方法</a></h4>
-                            
-                            <p><time datetime="2016-08-08T11:57:46.000Z"><a href="/2016/08/08/clss/">2016-08-08</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-10-06T11:08:15.000Z" itemprop="datePublished">
+          2016-10-06
+      </time>
+    
+</span>
+                <h1>canvas绘制七巧板</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;canvas width=&quot;800&quot; height=&quot;800&quot; id=&quot;canvas&quot; style=&quot;display:block;border:1px solid #000;&quot;&gt;</div><div class="line">		不支持</div><div class="line">	&lt;/canvas&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">var canvas = document.querySelector(&quot;#canvas&quot;);</div><div class="line">var context = canvas.getContext(&apos;2d&apos;);</div><div class="line">var xian =[</div><div class="line">		&#123;a:[&#123;x:0,y:0&#125;,&#123;x:400,y:400&#125;,&#123;x:0,y:800&#125;],color:&quot;red&quot;&#125;,</div><div class="line">		&#123;a:[&#123;x:0,y:0&#125;,&#123;x:400,y:400&#125;,&#123;x:800,y:0&#125;],color:&quot;green&quot;&#125;,</div><div class="line">		&#123;a:[&#123;x:800,y:0&#125;,&#123;x:800,y:400&#125;,&#123;x:600,y:600&#125;,&#123;x:600,y:200&#125;],color:&quot;#ef3d61&quot;&#125;,</div><div class="line">    	&#123;a:[&#123;x:600,y:200&#125;,&#123;x:600,y:600&#125;,&#123;x:400,y:400&#125;],color:&quot;#f9f51a&quot;&#125;,</div><div class="line">    	&#123;a:[&#123;x:400,y:400&#125;,&#123;x:600,y:600&#125;,&#123;x:400,y:800&#125;,&#123;x:200,y:600&#125;],color:&quot;#a54c09&quot;&#125;,</div><div class="line">   		&#123;a:[&#123;x:200,y:600&#125;,&#123;x:400,y:800&#125;,&#123;x:0,y:800&#125;],color:&quot;#fa8ccc&quot;&#125;,</div><div class="line">    	&#123;a:[&#123;x:800,y:400&#125;,&#123;x:800,y:800&#125;,&#123;x:400,y:800&#125;],color:&quot;#f6ca29&quot;&#125;</div><div class="line">	];</div><div class="line"></div><div class="line">	//第一种方法</div><div class="line">// for(var i = 0;i&lt;xian.length;i++)&#123;</div><div class="line">// 	context.beginPath();</div><div class="line">// 	context.moveTo(xian[i].a[0].x,xian[i].a[0].y);</div><div class="line">// 	for (var j = 0; j &lt; xian[i].a.length; j++) &#123;</div><div class="line">// 		context.lineTo(xian[i].a[j].x,xian[i].a[j].y);</div><div class="line">// 	&#125;</div><div class="line">// 	context.closePath();</div><div class="line">// 	context.fillStyle = xian[i].color;</div><div class="line">// 	context.stroke();</div><div class="line">// 	context.fill();</div><div class="line">// &#125;</div><div class="line"></div><div class="line"></div><div class="line">//第二种方法</div><div class="line">for (var i = 0; i &lt; xian.length; i++) &#123;</div><div class="line">       dian(xian[i]);</div><div class="line">   &#125;;</div><div class="line"></div><div class="line">function dian (item) &#123;</div><div class="line">       context.beginPath(); </div><div class="line">       context.moveTo(item.a[0].x,item.a[0].y);</div><div class="line">     	for (var i = 1; i &lt; item.a.length; i++) &#123;</div><div class="line">           context.lineTo(item.a[i].x,item.a[i].y); </div><div class="line">       &#125;;</div><div class="line">         </div><div class="line">       context.fillStyle = item.color;</div><div class="line">       context.closePath();</div><div class="line">       context.stroke();</div><div class="line">       context.fill(); </div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>光荣在于平淡，艰巨在于漫长。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/10/10/javascript/" style="float: left;">
+        ← JavaScript奇技淫巧44招
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/10/03/canvas/">
+        canvas基础使用 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/10/06/qiqiaoban/" data-title="canvas绘制七巧板" data-url="http://yoursite.com/2016/10/06/qiqiaoban/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
