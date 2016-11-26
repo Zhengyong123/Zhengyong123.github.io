@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>一道常被人轻视的前端JS面试题 | 剑出花残</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="剑出花残">
+    <meta name="author" content="JC">
+    <meta name="description" content="come on" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="剑出花残" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">剑出花残</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-10-25T12:49:36.000Z" itemprop="datePublished">
+          2016-10-25
+      </time>
+    
+</span>
+                <h1>一道常被人轻视的前端JS面试题</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="题目如下："><a href="#题目如下：" class="headerlink" title="题目如下："></a>题目如下：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function Foo() &#123;</div><div class="line">    getName = function () &#123; alert (1); &#125;;</div><div class="line">    return this;</div><div class="line">&#125;</div><div class="line">Foo.getName = function () &#123; alert (2);&#125;;</div><div class="line">Foo.prototype.getName = function () &#123; alert (3);&#125;;</div><div class="line">var getName = function () &#123; alert (4);&#125;;</div><div class="line">function getName() &#123; alert (5);&#125;</div><div class="line"></div><div class="line">//请写出以下输出结果：</div><div class="line">Foo.getName();</div><div class="line">getName();</div><div class="line">Foo().getName();</div><div class="line">getName();</div><div class="line">new Foo.getName();</div><div class="line">new Foo().getName();</div><div class="line">new new Foo().getName();</div></pre></td></tr></table></figure>
+<h3 id="答案是："><a href="#答案是：" class="headerlink" title="答案是："></a>答案是：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function Foo() &#123;</div><div class="line">    getName = function () &#123; alert (1); &#125;;</div><div class="line">    return this;</div><div class="line">&#125;</div><div class="line">Foo.getName = function () &#123; alert (2);&#125;;</div><div class="line">Foo.prototype.getName = function () &#123; alert (3);&#125;;</div><div class="line">var getName = function () &#123; alert (4);&#125;;</div><div class="line">function getName() &#123; alert (5);&#125;</div><div class="line"></div><div class="line">//答案：</div><div class="line">Foo.getName();//2</div><div class="line">getName();//4</div><div class="line">Foo().getName();//1</div><div class="line">getName();//1</div><div class="line">new Foo.getName();//2</div><div class="line">new Foo().getName();//3</div><div class="line">new new Foo().getName();//3</div></pre></td></tr></table></figure>
+<p><br>    此题是我综合之前的开发经验以及遇到的JS各种坑汇集而成。此题涉及的知识点众多，包括变量定义提升、this指针指向、运算符优先级、原型、继承、全局变量污染、对象属性及原型属性优先级等等。<br>此题包含7小问，分别说下。<br></p>
+
+<h2 id="第一问"><a href="#第一问" class="headerlink" title="第一问:"></a>第一问:</h2><p><br>    先看此题的上半部分做了什么，首先定义了一个叫Foo的函数，之后为Foo创建了一个叫getName的静态属性存储了一个匿名函数，之后为Foo的原型对象新创建了一个叫getName的匿名函数。之后又通过函数变量表达式创建了一个getName的函数，最后再声明一个叫getName函数。<br><br>第一问的 <code>Foo.getName</code> 自然是访问Foo函数上存储的静态属性，自然是2，没什么可说的。<br></p>
+
+<h2 id="第二问"><a href="#第二问" class="headerlink" title="第二问:"></a>第二问:</h2><p><br>    第二问，直接调用 getName 函数。既然是直接调用那么就是访问当前上文作用域内的叫<code>getName</code>的函数，所以跟1 2 3都没什么关系。此题有无数面试者回答为5。此处有两个坑，一是变量声明提升，二是函数表达式。<br></p>
+
+<h3 id="变量声明提升"><a href="#变量声明提升" class="headerlink" title="变量声明提升"></a>变量声明提升</h3><p><br>即所有声明变量或声明函数都会被提升到当前函数的顶部。<br><br>例如下代码:<br></p>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.log(&apos;x&apos; in window);//true</div><div class="line">var x;</div><div class="line">x = 0;</div></pre></td></tr></table></figure>
+<p><br>    代码执行时js引擎会将声明语句提升至代码最上方，变为：<br></p>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var x;</div><div class="line">console.log(&apos;x&apos; in window);//true</div><div class="line">x = 0;</div></pre></td></tr></table></figure>
+<h3 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h3><p><br>     <code>var getName</code>与 <code>function getName</code> 都是声明语句，区别在于 <code>var getName</code>是函数表达式，而 <code>function getName</code> 是函数声明。关于JS中的各种函数创建方式可以看<a href="http://www.cnblogs.com/xxcanghai/p/4991870.html" target="_blank" rel="external">大部分人都会做错的经典JS闭包面试题</a>这篇文章有详细说明。<br><br>函数表达式最大的问题，在于js会将此代码拆分为两行代码分别执行。<br><br>例如下代码：<br></p>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.log(x);//输出：function x()&#123;&#125;</div><div class="line">var x=1;</div><div class="line">function x()&#123;&#125;</div></pre></td></tr></table></figure>
+<p><br>    实际执行的代码为，先将 <code>var x=1</code> 拆分为 <code>var x;</code> 和 <code>x = 1;</code> 两行，再将 <code>var x;</code> 和 <code>function x(){}</code>两行提升至最上方变成：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var x;</div><div class="line">function x()&#123;&#125;</div><div class="line">console.log(x);</div><div class="line">x=1;</div></pre></td></tr></table></figure><br><br><p><br>    所以最终函数声明的x覆盖了变量声明的x，log输出为x函数。<br><br>同理，原题中代码最终执行时的是：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Foo() &#123;</div><div class="line">    getName = function () &#123; alert (1); &#125;;</div><div class="line">    return this;</div><div class="line">&#125;</div><div class="line">var getName;//只提升变量声明</div><div class="line">function getName() &#123; alert (5);&#125;//提升函数声明，覆盖var的声明</div><div class="line"></div><div class="line">Foo.getName = function () &#123; alert (2);&#125;;</div><div class="line">Foo.prototype.getName = function () &#123; alert (3);&#125;;</div><div class="line">getName = function () &#123; alert (4);&#125;;//最终的赋值再次覆盖function getName声明</div><div class="line"></div><div class="line">getName();//最终输出4</div></pre></td></tr></table></figure><br><br>## 第三问<br><br><p><br>    第三问的 <code>Foo().getName();</code> 先执行了Foo函数，然后调用Foo函数的返回值对象的getName属性函数。<br><br>Foo函数的第一句 <code>getName = function () { alert (1); };</code> 是一句函数赋值语句，注意它没有var声明，所以先向当前Foo函数作用域内寻找getName变量，没有。再向当前函数作用域上层，即外层作用域内寻找是否含有getName变量，找到了，也就是第二问中的alert(4)函数，将此变量的值赋值为 <code>function(){alert(1)}</code>。<br><br>此处实际上是将外层作用域内的getName函数修改了。<br></p><br><p>此处实际上是将外层作用域内的getName函数修改了。</p>
+
+<h4 id="注意：此处若依然没有找到会一直向上查找到window对象，若window对象中也没有getName属性，就在window对象中创建一个getName变量。"><a href="#注意：此处若依然没有找到会一直向上查找到window对象，若window对象中也没有getName属性，就在window对象中创建一个getName变量。" class="headerlink" title="注意：此处若依然没有找到会一直向上查找到window对象，若window对象中也没有getName属性，就在window对象中创建一个getName变量。"></a>注意：此处若依然没有找到会一直向上查找到window对象，若window对象中也没有getName属性，就在window对象中创建一个getName变量。</h4><p><br>    之后Foo函数的返回值是this，而JS的this问题博客园中已经有非常多的文章介绍，这里不再多说。<br><br>简单的讲，this的指向是由所在函数的调用方式决定的。而此处的直接调用方式，this指向window对象。<br><br>遂Foo函数返回的是window对象，相当于执行 <code>window.getName()</code>，而window中的getName已经被修改为alert(1)，所以最终会输出1<br><br>此处考察了两个知识点，一个是变量作用域问题，一个是this指向问题。<br></p>
+
+<h2 id="第四问"><a href="#第四问" class="headerlink" title="第四问"></a>第四问</h2><p>直接调用getName函数，相当于 <code>window.getName()</code> ，因为这个变量已经被Foo函数执行时修改了，遂结果与第三问相同，为1</p>
+
+<h2 id="第五问"><a href="#第五问" class="headerlink" title="第五问"></a>第五问</h2><p><br>    第五问 <code>new Foo.getName();</code>,此处考察的是js的运算符优先级问题。<br></p>
+
+<h3 id="js运算符优先级"><a href="#js运算符优先级" class="headerlink" title="js运算符优先级:"></a>js运算符优先级:</h3><p><img src="http://images2015.cnblogs.com/blog/746158/201602/746158-20160214172949325-418813184.png" alt="746158-20160214172949325-418813184"></p>
+<h3 id="参考链接-https-developer-mozilla-org-zh-CN-docs-Web-JavaScript-Reference-Operators-Operator-Precedence"><a href="#参考链接-https-developer-mozilla-org-zh-CN-docs-Web-JavaScript-Reference-Operators-Operator-Precedence" class="headerlink" title="参考链接   https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence"></a>参考链接   <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence</a></h3><p><br>    通过查上表可以得知点（.）的优先级高于new操作，遂相当于是:<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">new (Foo.getName)();</div></pre></td></tr></table></figure><br><br><p><br>    所以实际上将getName函数作为了构造函数来执行，遂弹出2。<br></p>
+
+<h2 id="第六问"><a href="#第六问" class="headerlink" title="第六问"></a>第六问</h2><p><br>    第六问 <code>new Foo().getName()</code> ，首先看运算符优先级括号高于new，实际执行为<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(new Foo()).getName()</div></pre></td></tr></table></figure><br><br><p><br>    遂先执行Foo函数，而Foo此时作为构造函数却有返回值，所以这里需要说明下js中的构造函数返回值问题。<br></p><br><p><br>    原题中，返回的是this，而this在构造函数中本来就代表当前实例化对象，遂最终Foo函数返回实例化对象。<br><br>之后调用实例化对象的getName函数，因为在Foo构造函数中没有为实例化对象添加任何属性，遂到当前对象的原型对象（prototype）中寻找getName，找到了。<br><br>遂最终输出3。<br></p>
+
+
+<h2 id="第七问"><a href="#第七问" class="headerlink" title="第七问"></a>第七问</h2><p><br>    第七问, <code>new new Foo().getName();</code> 同样是运算符优先级问题。<br><br>最终实际执行为：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">new ((new Foo()).getName)();</div></pre></td></tr></table></figure><br><br><p><br>    先初始化Foo的实例化对象，然后将其原型上的getName函数作为构造函数再次new。<br><br>遂最终结果为3<br></p>
+
+
+<p>转载自-&gt;<a href="http://www.cnblogs.com/xxcanghai/p/5189353.html" target="_blank" rel="external">http://www.cnblogs.com/xxcanghai/p/5189353.html</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/10/22/jsCopy/">
+        javascript实现点击按钮复制指定区域文本 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/10/25/jsmianshi/" data-title="一道常被人轻视的前端JS面试题" data-url="http://yoursite.com/2016/10/25/jsmianshi/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By JC. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
