@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		#canvas{
+			display: block;
+			border:1px red solid;
+		}
+	</style>
+</head>
+<body>
+	<canvas width="900" height="700" id="canvas">
+		jbikjhkjh
+	</canvas>
+	<div>
+		<input type="" placeholder="请输入姓名"/>
+		<button>完成</button>
+	</div>
+	<canvas id="text" width="300" height="100" style="border:1px red solid;display:none;">
+		;klj
+	</canvas>
+	<script type="text/javascript">
+		var canvas = document.querySelector("#canvas");
+		var context = canvas.getContext("2d");
+		var input = document.querySelector("input");
+		var btn = document.querySelector("button");
+
+		// context.drawImage(img,0,0);
+		// img 是图片对象,  0,0,是图片坐标
+		// 默认以原尺寸加载
+
+		// context.drawImage(img,0,0,500,200);
+		// 500,200  是图片的大小
+
+		var text = document.querySelector("#text");
+		var textCtx = text.getContext("2d");
+		textCtx.font = "16px lighter";
+		textCtx.strokeStyle = "#666";
+		var xingming = input.value;
+		btn.onclick = function(){
+			context.clearRect(0,0,900,700)
+			textCtx.clearRect(0,0,900,700)
+			xingming = input.value;
+			img.onload();
+		}
+
+		
+
+
+		var img = new Image();
+		img.src = "./3333.jpg";
+		img.onload = function () {
+			textCtx.strokeText(xingming,50,50);
+			context.drawImage(img,0,0);
+			context.drawImage(text,240,150);
+		}
+	</script>	
+
+</body>
+</html>
