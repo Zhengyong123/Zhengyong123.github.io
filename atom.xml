@@ -5,11 +5,11 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-02T08:05:41.000Z</updated>
+  <updated>2016-12-02T08:36:34.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>JC</name>
+    <name>郑勇</name>
     
   </author>
   
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/11/02/jsObject/"/>
     <id>http://yoursite.com/2016/11/02/jsObject/</id>
     <published>2016-11-02T07:46:33.000Z</published>
-    <updated>2016-12-02T08:05:41.000Z</updated>
+    <updated>2016-12-02T08:36:34.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="工厂模式：无法识别对象"><a href="#工厂模式：无法识别对象" class="headerlink" title="工厂模式：无法识别对象"></a>工厂模式：无法识别对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function createObject(name, age) &#123; //集中实例化的函数</div><div class="line">　　var obj = new Object();</div><div class="line">　　obj.name = name;</div><div class="line">　　obj.age = age;</div><div class="line">　　obj.run = function () &#123;</div><div class="line">　　　　return this.name + this.age + &apos;运行中...&apos;;</div><div class="line">　　&#125;;</div><div class="line">　　return obj;</div><div class="line">&#125;</div><div class="line">var box1 = createObject(&apos;Lee&apos;, 100); //第一个实例</div><div class="line">var box2 = createObject(&apos;Jack&apos;, 200); //第二个实例</div><div class="line">alert(box1.run());</div><div class="line">alert(box2.run()); //保持独立</div><div class="line">alert(typeof box1); //Object</div><div class="line">alert(box1 instanceof Object); //true</div></pre></td></tr></table></figure>
 <h2 id="构造函数-构造方法-：可以识别对象"><a href="#构造函数-构造方法-：可以识别对象" class="headerlink" title="构造函数(构造方法)：可以识别对象"></a>构造函数(构造方法)：可以识别对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function Box(name, age) &#123; //构造函数模式</div><div class="line">　　this.name = name;</div><div class="line">　　this.age = age;</div><div class="line">　　this.run = function () &#123;</div><div class="line">　　　　return this.name + this.age + &apos;运行中...&apos;;</div><div class="line">　　&#125;;</div><div class="line">&#125;</div><div class="line">var box1 = new Box(&apos;Lee&apos;, 100); //new Box()即可</div><div class="line">var box2 = new Box(&apos;Jack&apos;, 200);</div><div class="line">alert(box1.run());</div><div class="line">alert(box1 instanceof Box); //很清晰的识别他从属于 Box</div></pre></td></tr></table></figure>
@@ -49,6 +49,8 @@
     
     </summary>
     
+    
+      <category term="JavaScript,面向对象" scheme="http://yoursite.com/tags/JavaScript-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
