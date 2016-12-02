@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+
+			}
+			.infinite{
+				box-sizing: padding-box;
+				height: 220px;
+				padding-top: 20px;
+				width: 800px;
+				border: 5px blue solid;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.box{
+				height: 160px;
+				position: relative;
+			}
+			ul{
+				float: left;
+				width: 800px;
+				height: 160px;
+				text-align: center;
+				line-height: 160px;
+				overflow: hidden;
+				position: absolute;
+				transform: 0.5s;
+			}
+			.two{
+				left: 800px;
+			}
+			ul li{
+				height: 160px;
+				width: 25%;
+				float: left;
+			}
+			ul li:nth-child(1){
+				background-color: red;
+			}
+			ul li:nth-child(2){
+				background-color: blue;
+			}
+			ul li:nth-child(3){
+				background-color: green;
+			}
+			ul li:nth-child(4){
+				background-color: yellow;
+			}
+			.warp{
+				width: 800px;
+				height: 60px;
+			}
+			.warp div{
+				float: left;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				font-size: 30px;
+			}
+			.left{
+				width: 250px;
+				background: lightyellow;
+			}
+			.on{
+				width: 300px;
+				background: lightblue;
+			}
+			.right{
+				width: 250px;
+				background: lightpink;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="infinite">
+			<div class="box">
+				<ul class="one">
+					<li><a href="https://zhengyong123.github.io/list/img3.html">修改房产证</a></li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+				<ul class="two">
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+				</ul>
+			</div>
+			<div class="warp">
+				<div class="left">⬅️</div>
+				<div class="on">⏸</div>
+				<div class="right">➡️</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		// window.onload     文档加载完毕之后执行   一个文件只能出现一次
+
+
+		window.onload = function(){
+			var div = document.querySelector(".infinite");
+			// var ul = document.querySelectorAll("ul");
+			var box = document.querySelector(".box");
+			var one = document.querySelector(".one");
+			var two = document.querySelector(".two");
+			var div = document.querySelectorAll(".warp div");
+
+
+			var width = div.clientWidth;
+			box.style.width = width*2 + "px";
+			// var html = ul.cloneNode(true);
+			// box.appendChild(html);
+			var left = 0;
+			var right = 800;
+			var timer1 = null;
+			var timer2 = null;
+			function fn2(){
+				left --;
+				if(Math.abs(left) >= 800) {
+					left = 800;
+				}
+				right --;
+				if (Math.abs(right) >= 800) {
+					right = 800;
+				}
+				one.style.left = left + "px";
+				two.style.left = right + "px";
+			};
+			function fn1(){
+				left ++;
+				if(Math.abs(left) >= 800) {
+					left = -800;
+				}
+				right ++;
+				if (Math.abs(right) >= 800) {
+					right = -800;
+				}
+				one.style.left = left + "px";
+				two.style.left = right + "px";
+			};
+			timer2 = setInterval(fn2,20);
+			div[0].onclick = function(){
+				clearInterval(timer1);
+				clearInterval(timer2);
+				timer2 = setInterval(fn2,20);
+			}
+			div[1].onclick = function(){
+				clearInterval(timer1);
+				clearInterval(timer2);
+			}
+			div[2].onclick = function(){
+				clearInterval(timer1);
+				clearInterval(timer2);
+				timer1 = setInterval(fn1,20);
+			}
+		}
+	</script>
+</html>
