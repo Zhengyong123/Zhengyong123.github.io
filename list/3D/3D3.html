@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: url(images/11.jpg);
+				background-size: 100%;
+			}
+			.eyes{
+				perspective: 1200px;
+				perspective-origin: 50% 50%;
+				/*transform: rotateX(50deg);*/
+			}
+			.box{
+				transform-style: preserve-3d;
+				background-color: transparent;
+				height: 600px;
+				transform: rotateX(0deg) rotateY(0deg);
+				animation: move 10s 4s linear infinite;
+			}
+
+			.box div{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 250px;
+				left: 400px;
+				opacity: 0.8;
+			/*	-webkit-box-reflect:below 20px
+				-webkit-linear-gradient(
+						rgba(255,255,255,0),
+						rgba(255,255,255,0.5),
+						rgba(255,255,255,0.9)
+						);*/
+			}
+
+			.box div:nth-child(16){
+				animation: has_rotate16 0.5s 0s forwards;
+				background-color: blue;
+			}
+			@keyframes has_rotate16{
+				from{transform: rotateY(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateY(360deg) translateX(0px)translateZ(200px);}
+			}
+			.box div:nth-child(15){
+				animation: has_rotate15 0.5s 0.25s forwards;
+				background-color: red;
+			}
+			@keyframes has_rotate15{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(405deg) translateX(30px) translateZ(200px);}
+			}
+
+			.box div:nth-child(14){
+				animation: has_rotate14 0.75s 0.5s forwards;
+				background-color: yellow;
+			}
+			@keyframes has_rotate14{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(450deg) translateX(60px) translateZ(200px);}
+			}
+			.box div:nth-child(13){
+				animation: has_rotate13 0.75s 0.5s forwards;
+				background-color: purple;
+			}
+			@keyframes has_rotate13{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(495deg) translateX(90px) translateZ(200px);}
+			}
+			.box div:nth-child(12){
+				animation: has_rotate12 1s 0.75s forwards;
+				background-color: green;
+			}
+			@keyframes has_rotate12{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(540deg) translateX(120px) translateZ(200px);}
+			}
+			.box div:nth-child(11){
+				animation: has_rotate11 1s 0.75s forwards;
+				background-color: gray;
+			}
+			@keyframes has_rotate11{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(585deg) translateX(150px) translateZ(200px);}
+			}
+			.box div:nth-child(10){
+				animation: has_rotate10 1.25s 1s forwards;
+				background-color: pink;
+			}
+			@keyframes has_rotate10{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(630deg) translateX(180px) translateZ(200px);}
+			}
+			.box div:nth-child(9){
+				animation: has_rotate9 1.25s 1s forwards;
+				background-color: orange;
+			}
+			@keyframes has_rotate9{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(675deg) translateX(210px) translateZ(200px);}
+			}
+			.box div:nth-child(8){
+				animation: has_rotate8 1.5s 1.25s forwards;
+				background-color: blue;
+			}
+			@keyframes has_rotate8{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(720deg) translateX(240px) translateZ(200px);}
+			}
+		
+			.box div:nth-child(7){
+				animation: has_rotate7 1.5s 1.25s forwards;
+				background-color: red;
+			}
+			@keyframes has_rotate7{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(765deg) translateX(270px) translateZ(200px);}
+			}
+
+			.box div:nth-child(6){
+				animation: has_rotate6 1.75s 1.5s forwards;
+				background-color: yellow;
+			}
+			@keyframes has_rotate6{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(810deg) translateX(300px) translateZ(200px);}
+			}
+			.box div:nth-child(5){
+				animation: has_rotate5 1.75s 1.5s forwards;
+				background-color: purple;
+			}
+			@keyframes has_rotate5{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(855deg) translateX(330px) translateZ(200px);}
+			}
+			.box div:nth-child(4){
+				animation: has_rotate4 2s 1.75s forwards;
+				background-color: green;
+			}
+			@keyframes has_rotate4{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(900deg) translateX(360px) translateZ(200px);}
+			}
+			.box div:nth-child(3){
+				animation: has_rotate3 2s 1.75s forwards;
+				background-color: gray;
+			}
+			@keyframes has_rotate3{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(945deg) translateX(390px) translateZ(200px);}
+			}
+			.box div:nth-child(2){
+				animation: has_rotate2 2.25s 2s forwards;
+				background-color: pink;
+			}
+			@keyframes has_rotate2{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(990deg) translateX(420px) translateZ(200px);}
+			}
+			.box div:nth-child(1){
+				animation: has_rotate1 2.25s 2s forwards;
+				background-color: orange;
+			}
+			@keyframes has_rotate1{
+				from{transform: rotateX(0deg) translateX(0px) translateZ(0px);}
+				to{transform: rotateX(1035deg) translateX(450px) translateZ(200px);}
+			}
+
+
+
+
+			/*.div1{
+				background-color: blue;
+				transform: rotateX(0deg) translateX(0px) translateZ(200px);
+			}
+			.div2{
+				background-color: red;
+				transform: rotateX(45deg) translateX(30px) translateZ(200px);
+			}
+			.div3{
+				background-color: yellow;
+				transform: rotateX(90deg) translateX(60px) translateZ(200px);
+			}
+			.div4{
+				background-color: purple;
+				transform: rotateX(135deg) translateX(90px) translateZ(200px);
+			}
+			.div5{
+				background-color: green;
+				transform: rotateX(180deg) translateX(120px) translateZ(200px);
+			}
+			.div6{
+				background-color: gray;
+				transform: rotateX(225deg) translateX(150px) translateZ(200px);
+			}
+			.div7{
+				background-color: pink;
+				transform: rotateX(270deg) translateX(180px) translateZ(200px);
+			}
+			.div8{
+				background-color: orange;
+				transform: rotateX(315deg) translateX(210px) translateZ(200px);
+			}
+			.div9{
+				background-color: orange;
+				transform: rotateX(360deg) translateX(240px) translateZ(200px);
+			}
+			.div10{
+				background-color: pink;
+				transform: rotateX(405deg) translateX(270px) translateZ(200px);
+			}
+			.div11{
+				background-color: gray;
+				transform: rotateX(450deg) translateX(300px) translateZ(200px);
+			}
+			.div12{
+				background-color: green;
+				transform: rotateX(495deg) translateX(330px) translateZ(200px);
+			}
+			.div13{
+				background-color: purple;
+				transform: rotateX(540deg) translateX(360px) translateZ(200px);
+			}
+			.div14{
+				background-color: yellow;
+				transform: rotateX(585deg) translateX(390px) translateZ(200px);
+			}
+			.div15{
+				background-color: red;
+				transform: rotateX(630deg) translateX(410px) translateZ(200px);
+			}
+			.div16{
+				background-color: blue;
+				transform: rotateX(685deg) translateX(440px) translateZ(200px);
+			}*/
+			/*.box:hover{
+				transform: rotateY(0deg) rotateX(720deg);				
+				transition: all 3s ease;
+			}*/
+			@keyframes move{
+				0%{transform: rotateX(0deg) rotateY(0) rotateZ(0deg);}
+				/*50%{transform: rotateX(720deg) rotateY(0deg) rotateZ(0deg);}*/
+				100%{transform: rotateX(1440deg) rotateY(0deg) rotateZ(0deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div><a href="https://zhengyong123.github.io/list/index.html" style="color:red;font-size:30px;">返回</a></div>
+		<div class="eyes">
+			<div class="box">
+				<div class="div1"><!-- <img src="images/1.jpg"> --></div>
+				<div class="div2"><!-- <img src="images/2.jpg"> --></div>
+				<div class="div3"><!-- <img src="images/3.jpg"> --></div>
+				<div class="div4"><!-- <img src="images/4.jpg"> --></div>
+				<div class="div5"><!-- <img src="images/5.jpg"> --></div>
+				<div class="div6"><!-- <img src="images/6.jpg"> --></div>
+				<div class="div7"><!-- <img src="images/7.jpg"> --></div>
+				<div class="div8"><!-- <img src="images/8.jpg"> --></div>
+				<div class="div9"></div>
+				<div class="div10"></div>
+				<div class="div11"></div>
+				<div class="div12"></div>
+				<div class="div13"></div>
+				<div class="div14"></div>
+				<div class="div15"></div>
+				<div class="div16"></div>
+			</div>
+		</div>
+		<p></p>
+		<p></p>
+		<p></p>
+		<h3><a href="https://github.com/Zhengyong123/Zhengyong123.github.io/tree/master/list/3D">源码下载</a></h3>
+		<h4>转载请注明出处https://github.com/Zhengyong123/Zhengyong123.github.io/tree/master/list/3D</h4>
+	</body>
+</html>

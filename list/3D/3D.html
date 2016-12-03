@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: url(images/11.jpg);
+				background-size: 100%;
+			}
+			.eyes{
+				perspective: 1200px;
+				perspective-origin: 50% 50%;
+				/*transform: rotateX(50deg);*/
+			}
+			.box{
+				transform-style: preserve-3d;
+				background-color: transparent;
+				height: 600px;
+				width: 600px;
+				transform: rotateX(0deg) rotateY(0deg);
+				animation: move 20s 4s infinite;
+				position: absolute;
+				top: 50%;
+				left: 25%;
+			}
+
+			.box div{
+				width: 100px;
+				height: 200px;
+				position: absolute;
+				top: 200px;
+				left: 250px;
+				opacity: 0.8;
+				-webkit-box-reflect:below 20px
+				-webkit-linear-gradient(
+						rgba(255,255,255,0),
+						rgba(255,255,255,0.5),
+						rgba(255,255,255,0.9)
+						);	
+			}
+
+
+
+			.box div:nth-child(8){
+				animation: has_rotate8 0.5s 0.25s forwards;
+			}
+			@keyframes has_rotate8{
+				from{transform: rotateY(0deg) translateZ(0px);}
+				to{transform: rotateY(405deg) translateZ(200px);}
+			}
+			.box div:nth-child(7){
+				animation: has_rotate7 0.75s 0.5s forwards;
+			}
+			@keyframes has_rotate7{
+				from{transform: rotateY(0deg) translateZ(0px);}
+				to{transform: rotateY(450deg) translateZ(200px);}
+			}
+			.box div:nth-child(6){
+				animation: has_rotate6 1s 0.75s forwards;
+			}
+			@keyframes has_rotate6{
+				from{transform: rotateY(0deg) translateZ(0px);}
+				to{transform: rotateY(495deg) translateZ(200px);}
+			}
+            .box div:nth-child(5){
+				animation: has_rotate5 1.25s 1s forwards;
+			}
+			@keyframes has_rotate5{
+				from{transform: rotateY(0deg) translateZ(0px);}
+				to{transform: rotateY(540deg) translateZ(200px);}
+			}
+			.box div:nth-child(4){
+				animation: has_rotate4 1.5s 1.25s forwards;
+			}
+			@keyframes has_rotate4{
+				from{transform: rotateY(0deg) translateZ(0px);}
+				to{transform: rotateY(585deg) translateZ(200px);}
+			}
+			.box div:nth-child(3){
+				animation: has_rotate3 1.75s 1.5s forwards;
+			}
+			@keyframes has_rotate3{
+				from{transform: rotateY(0deg) translateZ(0px);}
+				to{transform: rotateY(630deg) translateZ(200px);}
+			}
+			.box div:nth-child(2){
+				animation: has_rotate2 2s 1.75s forwards;
+			}
+			@keyframes has_rotate2{
+				from{transform: rotateY(0deg) translateZ(0px);}
+				to{transform: rotateY(675deg) translateZ(200px);}
+			}
+			.box div:nth-child(1){
+				animation: has_rotate1 2.25s 2s forwards;
+			}
+			@keyframes has_rotate1{
+				from{transform: rotateY(0deg) translateZ(0px);}
+				to{transform: rotateY(720deg) translateZ(200px);}
+			}
+
+
+
+
+
+
+
+
+
+
+			/*.div1{
+				background-color: blue;
+				transform: translateZ(300px);
+			}
+			.div2{
+				background-color: red;
+				transform: rotateY(45deg) translateZ(300px);
+			}
+			.div3{
+				background-color: yellow;
+				transform: rotateY(90deg) translateZ(300px);
+			}
+			.div4{
+				background-color: purple;
+				transform: rotateY(135deg) translateZ(300px);
+			}
+			.div5{
+				background-color: green;
+				transform: rotateY(180deg) translateZ(300px);
+			}
+			.div6{
+				background-color: gray;
+				transform: rotateY(225deg) translateZ(300px);
+			}
+			.div7{
+				background-color: pink;
+				transform: rotateY(270deg) translateZ(300px);
+			}
+			.div8{
+				background-color: orange;
+				transform: rotateY(315deg) translateZ(300px);
+			}*/
+			/*.box:hover{
+				transform: rotateY(360deg) rotateX(0deg);
+				transition: all 3s ease;
+			}*/
+			@keyframes move{
+				0%{transform: rotateX(0deg) rotateY(0) rotateZ(0deg);}
+				50%{transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg);}
+				100%{transform: rotateX(0deg) rotateY(720deg) rotateZ(0deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div><a href="https://zhengyong123.github.io/list/index.html" style="color:red;font-size:30px;">返回</a></div>
+		<div class="eyes">
+			<div class="box">
+				<div class="div1"><img src="images/1.jpg"></div>
+				<div class="div2"><img src="images/2.jpg"></div>
+				<div class="div3"><img src="images/3.jpg"></div>
+				<div class="div4"><img src="images/4.jpg"></div>
+				<div class="div5"><img src="images/5.jpg"></div>
+				<div class="div6"><img src="images/6.jpg"></div>
+				<div class="div7"><img src="images/7.jpg"></div>
+				<div class="div8"><img src="images/8.jpg"></div>
+			</div>
+		</div>
+		<p></p>
+		<p></p>
+		<p></p>
+		<h3><a href="https://github.com/Zhengyong123/Zhengyong123.github.io/tree/master/list/3D">源码下载</a></h3>
+		<h4>转载请注明出处https://github.com/Zhengyong123/Zhengyong123.github.io/tree/master/list/3D</h4>
+	</body>
+</html>

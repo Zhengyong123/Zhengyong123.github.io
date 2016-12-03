@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>立方体</title>
+		<style type="text/css">
+			.eyes{
+				perspective: 1200px;
+				perspective-origin: 50% 50%;
+			}
+			.box{
+				transform-style: preserve-3d;
+				background-color: red;				
+				height: 200px;
+				width: 200px;
+				margin-top: 30vh;
+				margin-left: 40vw;
+				position: absolute;
+				animation: move 9s linear infinite;
+				animation-direction: alternate;
+			}
+			@keyframes move{
+				0%{transform: rotateX(0) rotateY(0);}
+				100%{transform: rotateX(720deg) rotateY(720deg);}
+			}
+			.box:hover .div1{
+				transform: rotateX(90deg) translateZ(300px) scale(2,2);
+			}
+			.box:hover .div2{
+				transform: rotateX(270deg) translateZ(300px) scale(2,2);
+			}
+			.box:hover .div3{
+				transform: rotateY(270deg) translateZ(300px) scale(2,2);
+			}
+			.box:hover .div4{
+				transform: rotateY(90deg) translateZ(300px) scale(2,2);
+			}
+			.box:hover .div5{
+				transform: translateZ(300px) scale(2,2);
+			}
+			.box:hover .div6{
+				transform: translateZ(-300px) scale(2,2);
+			}
+			.box div{
+				width: 200px;
+				height: 200px;
+				font-size: 80px;
+				text-align: center;
+				line-height: 200px;
+				color: white;
+				position: absolute;
+				opacity: 0.5;
+			}
+			.div1{
+				background-color: lightblue;
+				transform: rotateX(90deg) translateZ(100px);
+				transition: 1s;
+
+			}
+			.div11{
+				background-color: lightblue;
+				transform: rotateX(90deg) translateZ(100px);
+				transition: 1s;
+
+			}
+			.div2{
+				background-color: red;
+				transform: rotateX(270deg) translateZ(100px);
+				transition: 1s;
+			}
+			.div22{
+				background-color: red;
+				transform: rotateX(270deg) translateZ(100px);
+				transition: 1s;
+			}
+			.div3{
+				background-color: yellow;
+				transform: rotateY(270deg) translateZ(100px);
+				transition: 1s;
+			}
+			.div33{
+				background-color: yellow;
+				transform: rotateY(270deg) translateZ(100px);
+				transition: 1s;
+			}
+			.div4{
+				background-color: lightgreen;
+				transform: rotateY(90deg) translateZ(100px);
+				transition: 1s;
+			}
+			.div44{
+				background-color: lightgreen;
+				transform: rotateY(90deg) translateZ(100px);
+				transition: 1s;
+			}
+			.div5{
+				background-color: purple;
+				transform: translateZ(100px);
+				transition: 1s;
+				
+			}
+			.div55{
+				background-color: purple;
+				transform: translateZ(100px);
+				transition: 1s;
+				
+			}
+			.div6{
+				background-color: pink;
+				transform: translateZ(-100px);
+				transition: 1s;
+			}
+			.div66{
+				background-color: pink;
+				transform: translateZ(-100px);
+				transition: 1s;
+			}
+		</style>
+	</head>
+	<body>
+		<div><a href="https://zhengyong123.github.io/list/index.html" style="color:red;font-size:30px;">返回</a></div>
+		<div class="eyes">
+			<div class="box">
+				<div class="div1">1</div>
+				<div class="div11">1</div>
+				<div class="div2">2</div>
+				<div class="div22">2</div>
+				<div class="div3">3</div>
+				<div class="div33">3</div>
+				<div class="div4">4</div>
+				<div class="div44">4</div>
+				<div class="div5">5</div>
+				<div class="div55">5</div>
+				<div class="div6">6</div>
+				<div class="div66">6</div>
+			</div>
+		</div>
+		<p></p>
+		<p></p>
+		<p></p>
+		<h3><a href="https://github.com/Zhengyong123/Zhengyong123.github.io/tree/master/list/3D">源码下载</a></h3>
+		<h4>转载请注明出处https://github.com/Zhengyong123/Zhengyong123.github.io/tree/master/list/3D</h4>
+	</body>
+</html>

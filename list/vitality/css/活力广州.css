@@ -1,0 +1,209 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.back{
+	border: none;
+	z-index: -1;
+	position: fixed;
+	vertical-align: top;
+	width: 100%;
+	height:100%;
+}
+.toudiv{
+	width: 1092px;
+	height: 70px;
+	padding-top: 117px;
+	margin:auto;
+	position: relative;
+}
+.toudiv img{
+	position: absolute;
+}
+.tou1{
+	margin-bottom: 15px;
+}
+.tou2{
+	margin-left: 134px;
+	margin-top: 20px;
+}
+.box{
+	transform-style: preserve-3d;
+	transform: rotateY(0deg) rotateX(0deg);
+	width: 880px;
+	height: 430px;
+	margin:auto;
+	overflow: hidden;
+}
+@media screen and (max-width:630px ){
+	.toudiv{
+		width: 100%;
+		height: 70px;
+		padding-top: 117px;
+		margin:auto;
+		position: relative;
+	}
+	.tou1{
+		margin-top: -60px;
+		margin-left: 15%;
+		width: 100px; 
+	}
+	.tou2{
+		margin-top: 0px;
+		margin-left: 15%;
+		width: 200px;
+	}
+	.box{
+		width: 73%;
+		height: 100%;
+		margin:0 auto;
+		left: 12%;
+		top: 21%;
+		/*position: absolute;*/
+	}
+	.zuodiv a{
+		overflow: hidden;
+	}
+	.zuodiv .i3{
+		overflow: hidden;
+		width: 61%;
+		height: 96px;
+		float: left;
+	}
+	.zuodiv .i4{
+		overflow: hidden;
+		width: 36%;
+		height: 96px;
+		float: right;
+	}
+	.youdiv img{
+		overflow: hidden;
+	}
+	.youdiv .i1{
+		width: 62%;
+		height: 96px;
+		float: right;
+	}
+	.youdiv .i2{
+		width: 36%;
+		height: 96px;
+		float: left;
+	}
+	.youdiv a{
+		overflow: hidden;
+	}
+	.zuodiv{
+		float: left;
+		width: 100%;
+		height: 50%;
+		/*position: relative;*/
+		overflow: hidden;
+	}
+	.zuodiv .a3{
+		width: 58%;
+		height:31%;
+	}
+	.zuodiv .a4{
+		width: 36%;
+		height: 31%;
+	}
+	.youdiv{
+		top: 0px;
+		float: right;
+		width: 100%;
+		height: 50%;
+		/*position: relative;*/
+		overflow: hidden;
+	}
+	.youdiv .a1{
+		width: 61%;
+		height: 32%;
+	}
+	.youdiv .a2{
+		width: 36%;
+		height: 32%;
+	}
+}
+
+@media screen and (min-width:630px){
+	.zuodiv{
+	float: left;
+	width: 470px;
+	overflow: hidden;
+}
+.youdiv a{
+	float: right;
+}
+.zuodiv a{
+	float: left;
+}
+.zuodiv .a3{
+	margin-right: 25px;
+}
+.youdiv{
+	float: right;
+	width: 410px;
+	overflow: hidden;
+}
+.youdiv .a1{
+	width: 240px;
+}
+.youdiv .a2{
+	width: 160px;
+	margin-right: 5px;
+}
+.box a{
+	display: block;
+}
+.box a img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+}
+.zuodiv img:hover{
+	animation: one 0.5s linear forwards;
+}
+.youdiv img:hover{
+	animation: one 0.5s linear forwards;
+}
+@keyframes one{
+	0%{transform: translateY(0px);}
+	25%{transform: translateY(-50px);}
+	50%{transform: translateY(0px);}
+	75%{transform: translateY(-20px);}
+	100%{transform: translateY(0px);}
+}
+
+
+.i3{
+	animation: two 0.15s linear 4 forwards;
+}
+.i2{
+	animation: two 0.15s linear 4 forwards;
+}
+@keyframes two{
+	0%{transform:translateX(15px);}
+	50%{transform:translateX(-15px);}
+	100%{transform:translateX(0px);}
+}
+.i1{
+	animation: twos 0.5s linear 1 forwards;
+}
+.i4{
+	animation: twos 0.5s linear 1 forwards;
+}
+@keyframes twos{
+	0%{transform: scale(1,1);}
+	20%{transform: scale(1.2,1.2);}
+	40%{transform: scale(0.8,0.8);}
+	60%{transform: scale(1.1,1.1);}
+	80%{transform: scale(0.9,0.9);}
+	100%{transform: scale(1,1);}
+}
+
+
+
+
+
+

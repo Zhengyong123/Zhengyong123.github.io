@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+			}
+			.game{
+				width: 480px;
+				height: 720px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.bg{
+				position: absolute;
+				z-index: -10;
+				width: 100%;
+			}
+			.progress{
+				position: absolute;
+				width: 270px;
+				height: 24px;
+				border-radius: 10px;
+				left: 95px;
+				top: 99px;
+				background: url(img/progress.png) 0 0 no-repeat;
+				background-size: 100%;
+			}
+			.score{
+				position: absolute;
+				left: 100px;
+				top: 20px;
+				color: white;
+			}
+			.start{
+				width: 160px;
+				font-size: 40px;
+				cursor: pointer;
+				position: absolute;
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+				top: 400px;
+				text-align: center;
+				color: purple;
+			}
+			.start:hover{
+				cursor: pointer;
+				color: blue;
+			}
+			.over{
+				text-align: center;
+				position: absolute;
+				left: 90px;
+				top: 300px;
+				font-size: 50px;
+				color: red;
+				display: none;
+			}
+			.again{
+				width: 160px;
+				font-size: 40px;
+				cursor: pointer;
+				position: absolute;
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+				top: 400px;
+				text-align: center;
+				color: purple;
+				display: none;
+			}
+			.again:hover{
+				cursor: pointer;
+				color: blue;
+			}
+			.rules{
+				width: 100%;
+				position: absolute;
+				bottom: 0px;
+				font-size: 30px;
+				text-align: center;
+			}
+			.rule{
+				position: absolute;
+				top: 0;
+				width: 100%;
+				opacity: 0.7;
+				height: 520px;
+				background: #000;
+				padding-top: 200px;
+				text-align: center;
+				color: white;
+				display: none;
+			}
+			.rule p{
+				padding: 20px 0;
+				font-size: 30px;
+			}
+			a{
+				font-size: 20px;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="game">
+			<h1 class="score">0</h1>
+			<img src="img/game_bg.jpg" style="width: 100%;" class="bg">
+			<div class="progress"></div>
+			<div class="start">开始游戏</div>
+			<h1 class="over">GAME OVER</h1>
+			<div class="again">重新开始</div>
+			<div class="rules">游戏规则</div>
+			<div class="rule">
+				<p>游戏规则:</p>
+				<p>1.游戏时间:60s</p>
+				<p>2.拼手速,殴打灰太狼+10分</p>
+				<p>3.殴打小灰灰-10分</p>
+				<a href="#">[关闭]</a>
+			</div>
+		</div>
+		<div style="position: fixed;left: 0px;top: 200px;z-index: 100;">
+			<div>
+				<a href="https://zhengyong123.github.io/list/index.html" style="color:red;font-size:30px;">
+					返回
+				</a>
+			</div>
+			<h3><a href="https://github.com/Zhengyong123/Zhengyong123.github.io/tree/master/list/hui">源码下载</a></h3>
+			<h4>转载请注明出处</h4>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var game = document.querySelector(".game");
+		var score = document.querySelector(".score");
+		var pros = document.querySelector(".progress");
+		var start = document.querySelector(".start");
+		var over = document.querySelector(".over");
+		var again = document.querySelector(".again");
+		var rules = document.querySelector(".rules");
+		var rule = document .querySelector(".rule");
+		var close = document.querySelector("a");
+		var scores=document.querySelector('h1');
+		var s = 0;
+
+		start.onclick = function(){
+
+			this.remove();
+
+			var proLeft = 0;
+			var timer_pro = setInterval(function(){
+				proLeft-=0.045;
+				pros.style.backgroundPositionX = proLeft + "px";
+				if (proLeft<=-270) {
+					clearInterval(timer_pro);
+					clearInterval(circle);
+					over.style.display = "block";
+					again.style.display = "block";
+				}
+			},5)
+			star();	
+			res();
+		}
+
+
+
+		function star (){
+
+			circle = setInterval(function(){
+				var arrPos = [
+					{left:"170px",top:"210px"},
+					{left:"50px",top:"280px"},
+					{left:"45px",top:"370px"},
+					{left:"70px",top:"480px"},
+					{left:"200px",top:"450px"},
+					{left:"330px",top:"480px"},
+					{left:"320px",top:"356px"},
+					{left:"305px",top:"250px"},
+					{left:"200px",top:"450px"}
+				];
+				var wolf_1=['img/h0.png','img/h1.png','img/h2.png','img/h3.png','img/h4.png','img/h5.png','img/h6.png','img/h7.png','img/h8.png','img/h9.png'];
+				var wolf_2=['img/x0.png','img/x1.png','img/x2.png','img/x3.png','img/x4.png','img/x5.png','img/x6.png','img/x7.png','img/x8.png','img/x9.png'];
+				var appearWolf=['img/h0.png','img/x0.png'];
+				var newImg=document.createElement('img');
+				game.appendChild(newImg);
+				var wfLocation=rand(0,8);
+				newImg.style.left = arrPos[wfLocation].left;
+				newImg.style.top = arrPos[wfLocation].top;
+				newImg.style.position = "relative";
+
+				var X = rand(0,2);
+				if (X<2) {
+					X = "h";                                
+				}else{
+					X = "x";
+				}
+
+				var y = 0;
+					newImg.style.display = "block";
+					var appear0 = setInterval(function(){
+						newImg.src = "img/" + X + y + ".png";
+						y++;
+
+						var indexs = 0;
+						newImg.onclick = function(){
+							indexs++;
+							if (indexs>1) {
+								return false;
+							}
+							y=5;
+							for (var i=0;i<4;i++){
+								y++;
+								newImg.src=wolf_1[y];
+								if(y>9){
+									y--;
+								}
+							}
+							if (X == "h") {
+								s +=10;
+								score.innerHTML=s;
+							}else if(X=="x"){
+								s-=10;
+								if (s<=0) {
+									s=0;
+								}
+								score.innerHTML=s;
+							}
+						}
+						if (y>5) {
+							clearInterval(appear0);
+							setTimeout(function(){
+								y=5;
+								var appear1 = setInterval(function(){
+									newImg.src= "img/"+ X+y+ ".png";
+									console.log(y);
+									y--;
+									if (y<0) {
+										clearInterval(appear1);
+								
+										newImg.remove();
+									}
+								},50)
+							},stay)
+						}
+					},50) 
+			},secs)
+
+			s=0;
+			scores.innerHTML=s;
+		}
+
+
+		function res(){
+			again.onclick=function(){
+				// 按钮移除
+				again.style.display='none';
+				over.style.display='none';
+				var proLeft=0;
+				var timer_pro=setInterval(function(){
+					proLeft-=0.045;
+					pros.style.backgroundPositionX=proLeft+'px';
+					if (proLeft<=-270) {
+						clearInterval(timer_pro);
+						clearInterval(circle);
+						over.style.display='block';
+						again.style.display='block';
+					}
+				},5)
+				star();
+			}
+		}
+rules.onclick=function(){
+	rule.style.display='block';
+}
+close.onclick=function(){
+	rule.style.display='none';
+}
+
+
+
+// 随机函数
+function rand(min,max){
+	return Math.round(Math.random()*(max-min)+min);
+}
+var secs=rand(1200,1500);
+var stay=rand(150,250);
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</html>
