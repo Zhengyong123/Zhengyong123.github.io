@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>一些有用CSS代码片段(一) | 剑出花残</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="剑出花残">
+    <meta name="author" content="郑勇">
+    <meta name="description" content="come on" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="剑出花残" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="https://zhengyong123.github.io/list/index.html" target="_BLANK" class="animsition-link">小练习</a></li>
+                    
+                        <li><a href="" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="" class="animsition-link">null</a></li>
+                    
+                    <li><a href="" class="animsition-link">null</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">剑出花残</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4djW2NDX1NfQ1aGQkM_Cjow/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://www.weibo.com/6072801167/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-11-15T13:20:32.000Z" itemprop="datePublished">
+          2016-11-15
+      </time>
+    
+</span>
+                <h1>一些有用CSS代码片段(一)</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="垂直对齐"><a href="#垂直对齐" class="headerlink" title="垂直对齐"></a>垂直对齐</h2><p></p><p><br>如果你用CSS，则你会有困惑：我该怎么垂直对齐容器中的元素？现在，利用CSS3的Transform，可以很优雅的解决这个困惑：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.verticalcenter&#123;</div><div class="line">    position: relative;</div><div class="line">    top: 50%;</div><div class="line">    -webkit-transform: translateY(-50%);</div><div class="line">    -o-transform: translateY(-50%);</div><div class="line">    transform: translateY(-50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p>
+<h2 id="背景渐变动画"><a href="#背景渐变动画" class="headerlink" title="背景渐变动画"></a>背景渐变动画</h2><p></p><p><br>CSS中最具诱惑的一个功能是能添加动画效果，除了渐变，你可以给背景色、透明度、元素大小添加动画。目前，你不能为渐变添加动画，但下面的代码可能有帮助。它通过改变背景位置，让它看起来有动画效果。<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">button &#123;</div><div class="line">    background-image: linear-gradient(#5187c4, #1c2f45);</div><div class="line">    background-size: auto 200%;</div><div class="line">    background-position: 0 100%;</div><div class="line">    transition: background-position 0.5s;</div><div class="line">&#125;    </div><div class="line">button:hover &#123;</div><div class="line">    background-position: 0 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p>
+<h2 id="CSS：表格列宽自适用"><a href="#CSS：表格列宽自适用" class="headerlink" title="CSS：表格列宽自适用"></a>CSS：表格列宽自适用</h2><p></p><p><br>对于表格，当谈到调整列宽时，是比较痛苦的。然后，这里有一个可以使用的技巧：给td元素添加 white-space: nowrap;能让文本正确的换行<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">td &#123;</div><div class="line">    white-space: nowrap;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p>
+<h2 id="只在一边或两边显示盒子阴影"><a href="#只在一边或两边显示盒子阴影" class="headerlink" title="只在一边或两边显示盒子阴影"></a>只在一边或两边显示盒子阴影</h2><p></p><p><br>如果你要一个盒阴影，试试这个技巧，能为任一边添加阴影。为了实现这个，首先定义一个有具体宽高的盒子，然后正确定位:after伪类。实现底边阴影的代码如下：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">.box-shadow &#123;</div><div class="line">    background-color: #FF8020;</div><div class="line">    width: 160px;</div><div class="line">    height: 90px;</div><div class="line">    margin-top: -45px;</div><div class="line">    margin-left: -80px;</div><div class="line">    position: absolute;</div><div class="line">    top: 50%;</div><div class="line">    left: 50%;</div><div class="line">&#125;</div><div class="line">.box-shadow:after &#123;</div><div class="line">    content: &quot;&quot;;</div><div class="line">    width: 150px;</div><div class="line">    height: 1px;</div><div class="line">    margin-top: 88px;</div><div class="line">    margin-left: -75px;</div><div class="line">    display: block;</div><div class="line">    position: absolute;</div><div class="line">    left: 50%;</div><div class="line">    z-index: -1;</div><div class="line">    -webkit-box-shadow: 0px 0px 8px 2px #000000;</div><div class="line">       -moz-box-shadow: 0px 0px 8px 2px #000000;</div><div class="line">            box-shadow: 0px 0px 8px 2px #000000;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p>
+<h2 id="包裹长文本"><a href="#包裹长文本" class="headerlink" title="包裹长文本"></a>包裹长文本</h2><p></p><p><br>如果你碰到一个比自身容器长的文本，这个技巧对你很有用。在这个示例中，默认时，不管容器的宽度，文本都将水平填充。<br></p><br><img src="https://segmentfault.com/image?src=http://media02.hongkiat.com/simple-css-snippets/wrapping-long-text-before.jpg&amp;objectId=1190000002773955&amp;token=1ce75c7400f041e9da2d9045185c72c1" alt="https://segmentfault.com/image?src=http://media02.hongkiat.com/simple-css-snippets/wrapping-long-text-before.jpg&amp;objectId=1190000002773955&amp;token=1ce75c7400f041e9da2d9045185c72c1"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">pre &#123;</div><div class="line">    white-space: pre-line;</div><div class="line">    word-wrap: break-word;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p>
+<p></p><p><br>效果看起来如下：<br></p><br><img src="https://segmentfault.com/image?src=http://media02.hongkiat.com/simple-css-snippets/wrapping-long-text-after.jpg&amp;objectId=1190000002773955&amp;token=07541de0bc7468da5b077aa8a2a41a18" alt="https://segmentfault.com/image?src=http://media02.hongkiat.com/simple-css-snippets/wrapping-long-text-after.jpg&amp;objectId=1190000002773955&amp;token=07541de0bc7468da5b077aa8a2a41a18"><p></p>
+<h2 id="制造模糊文本"><a href="#制造模糊文本" class="headerlink" title="制造模糊文本"></a>制造模糊文本</h2><p></p><p><br>想要让文本模糊？可以使用color透明和text-shadow实现。<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.blurry-text &#123;</div><div class="line">   color: transparent;</div><div class="line">   text-shadow: 0 0 5px rgba(0,0,0,0.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p>
+<h2 id="用CSS动画实现省略号动画"><a href="#用CSS动画实现省略号动画" class="headerlink" title="用CSS动画实现省略号动画"></a>用CSS动画实现省略号动画</h2><p></p><p><br>这个片段将帮助你制造一个ellipsis的动画，对于简单的加载状态是很有用的，而不用去使用gif图像。<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.loading:after &#123;</div><div class="line">    overflow: hidden;</div><div class="line">    display: inline-block;</div><div class="line">    vertical-align: bottom;</div><div class="line">    animation: ellipsis 2s infinite;</div><div class="line">    content: &quot;\2026&quot;; /* ascii code for the ellipsis character */</div><div class="line">&#125;</div><div class="line">@keyframes ellipsis &#123;</div><div class="line">    from &#123;</div><div class="line">        width: 2px;</div><div class="line">    &#125;</div><div class="line">    to &#123;</div><div class="line">        width: 15px;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p>
+<h2 id="典型的CSS清除浮动"><a href="#典型的CSS清除浮动" class="headerlink" title="典型的CSS清除浮动"></a>典型的CSS清除浮动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.clearfix:after &#123; content: &quot;.&quot;; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; &#125;</div><div class="line">.clearfix &#123; display: inline-block; &#125;</div><div class="line"></div><div class="line">html[xmlns] .clearfix &#123; display: block; &#125;</div><div class="line">* html .clearfix &#123; height: 1%; &#125;</div></pre></td></tr></table></figure>
+<h2 id="CSS引用模板"><a href="#CSS引用模板" class="headerlink" title="CSS引用模板"></a>CSS引用模板</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">blockquote &#123;</div><div class="line">    background: #f9f9f9;</div><div class="line">    border-left: 10px solid #ccc;</div><div class="line">    margin: 1.5em 10px;</div><div class="line">    padding: .5em 10px;</div><div class="line">    quotes: &quot;\201C&quot;&quot;\201D&quot;&quot;\2018&quot;&quot;\2019&quot;;</div><div class="line">&#125;</div><div class="line">blockquote:before &#123;</div><div class="line">    color: #ccc;</div><div class="line">    content: open-quote;</div><div class="line">    font-size: 4em;</div><div class="line">    line-height: .1em;</div><div class="line">    margin-right: .25em;</div><div class="line">    vertical-align: -.4em;</div><div class="line">&#125;</div><div class="line">blockquote p &#123;</div><div class="line">    display: inline;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="个性圆角"><a href="#个性圆角" class="headerlink" title="个性圆角"></a>个性圆角</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#container &#123;</div><div class="line">    -webkit-border-radius: 4px 3px 6px 10px;</div><div class="line">    -moz-border-radius: 4px 3px 6px 10px;</div><div class="line">    -o-border-radius: 4px 3px 6px 10px;</div><div class="line">    border-radius: 4px 3px 6px 10px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/* alternative syntax broken into each line */</div><div class="line">#container &#123;</div><div class="line">    -webkit-border-top-left-radius: 4px;</div><div class="line">    -webkit-border-top-right-radius: 3px;</div><div class="line">    -webkit-border-bottom-right-radius: 6px;</div><div class="line">    -webkit-border-bottom-left-radius: 10px;</div><div class="line"></div><div class="line">    -moz-border-radius-topleft: 4px;</div><div class="line">    -moz-border-radius-topright: 3px;</div><div class="line">    -moz-border-radius-bottomright: 6px;</div><div class="line">    -moz-border-radius-bottomleft: 10px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="图片边框偏光"><a href="#图片边框偏光" class="headerlink" title="图片边框偏光"></a>图片边框偏光</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">img.polaroid &#123;</div><div class="line">    background:#000; /*Change this to a background image or remove*/</div><div class="line">    border:solid #fff;</div><div class="line">    border-width:6px 6px 20px 6px;</div><div class="line">    box-shadow:1px 1px 5px #333; /* Standard blur at 5px. Increase for more depth */</div><div class="line">    -webkit-box-shadow:1px 1px 5px #333;</div><div class="line">    -moz-box-shadow:1px 1px 5px #333;</div><div class="line">    height:200px; /*Set to height of your image or desired div*/</div><div class="line">    width:200px; /*Set to width of your image or desired div*/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="锚链接伪类"><a href="#锚链接伪类" class="headerlink" title="锚链接伪类"></a>锚链接伪类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">a:link &#123; color: blue; &#125;</div><div class="line">a:visited &#123; color: purple; &#125;</div><div class="line">a:hover &#123; color: red; &#125;</div><div class="line">a:active &#123; color: yellow; &#125;</div></pre></td></tr></table></figure>
+<h2 id="CSS3：全屏背景"><a href="#CSS3：全屏背景" class="headerlink" title="CSS3：全屏背景"></a>CSS3：全屏背景</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">html &#123; </div><div class="line">    background: url(&apos;images/bg.jpg&apos;) no-repeat center center fixed; </div><div class="line">    -webkit-background-size: cover;</div><div class="line">    -moz-background-size: cover;</div><div class="line">    -o-background-size: cover;</div><div class="line">    background-size: cover;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="内容垂直居中"><a href="#内容垂直居中" class="headerlink" title="内容垂直居中"></a>内容垂直居中</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.container &#123;</div><div class="line">    min-height: 6.5em;</div><div class="line">    display: table-cell;</div><div class="line">    vertical-align: middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="强制出现垂直滚动条"><a href="#强制出现垂直滚动条" class="headerlink" title="强制出现垂直滚动条"></a>强制出现垂直滚动条</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">html &#123; height: 101% &#125;</div></pre></td></tr></table></figure>
+<h2 id="CSS3渐变模板"><a href="#CSS3渐变模板" class="headerlink" title="CSS3渐变模板"></a>CSS3渐变模板</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#colorbox &#123;</div><div class="line">    background: #629721;</div><div class="line">    background-image: -webkit-gradient(linear, left top, left bottom, from(#83b842), to(#629721));</div><div class="line">    background-image: -webkit-linear-gradient(top, #83b842, #629721);</div><div class="line">    background-image: -moz-linear-gradient(top, #83b842, #629721);</div><div class="line">    background-image: -ms-linear-gradient(top, #83b842, #629721);</div><div class="line">    background-image: -o-linear-gradient(top, #83b842, #629721);</div><div class="line">    background-image: linear-gradient(top, #83b842, #629721);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>转载-&gt;<a href="https://segmentfault.com/a/1190000002773955" target="_blank" rel="external">https://segmentfault.com/a/1190000002773955</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/11/17/cssPart2/" style="float: left;">
+        ← 一些有用CSS代码片段(二)
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/11/11/marquee/">
+        html单个标签实现跑马灯效果 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/11/15/cssPart/" data-title="一些有用CSS代码片段(一)" data-url="http://yoursite.com/2016/11/15/cssPart/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 郑勇. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4djW2NDX1NfQ1aGQkM_Cjow/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://www.weibo.com/6072801167/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

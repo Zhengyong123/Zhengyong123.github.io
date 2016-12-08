@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>说一说z-index容易被忽略的那些特性 | 剑出花残</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="剑出花残">
+    <meta name="author" content="郑勇">
+    <meta name="description" content="come on" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="剑出花残" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="https://zhengyong123.github.io/list/index.html" target="_BLANK" class="animsition-link">小练习</a></li>
+                    
+                        <li><a href="" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="" class="animsition-link">null</a></li>
+                    
+                    <li><a href="" class="animsition-link">null</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">剑出花残</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4djW2NDX1NfQ1aGQkM_Cjow/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://www.weibo.com/6072801167/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-11-09T12:30:11.000Z" itemprop="datePublished">
+          2016-11-09
+      </time>
+    
+</span>
+                <h1>说一说z-index容易被忽略的那些特性</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><br>HTML文档中有三个div元素，每个div中存在一个span元素，三个span元素分别设置背景颜色为red，green，以及blue。然后每个span都设置为<code>position: absolute，</code>三个span的位置稍微错开以便可以仔细观察它们之间的堆叠顺序。然后将第一个span元素的z-index设置为1，其他两个不设置。具体代码如下：<br></p>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">  &lt;span class=&quot;red&quot;&gt;Red&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div&gt;</div><div class="line">  &lt;span class=&quot;green&quot;&gt;Green&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div&gt;</div><div class="line">  &lt;span class=&quot;blue&quot;&gt;Blue&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;style&gt;</div><div class="line">.red, .green, .blue &#123;</div><div class="line">  position: absolute;</div><div class="line">  width: 200px;</div><div class="line">  height: 200px;</div><div class="line">&#125;</div><div class="line">.red &#123;</div><div class="line">  background: red;</div><div class="line">  z-index: 1;</div><div class="line">&#125;</div><div class="line">.green &#123;</div><div class="line">  background: green;</div><div class="line">  top: 50px;</div><div class="line">  left: 50px;</div><div class="line">&#125;</div><div class="line">.blue &#123;</div><div class="line">  background: blue;</div><div class="line">  top: 100px;</div><div class="line">  left: 100px;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20161206110348135" alt="20161206110348135"></p>
+<p><br>那么问题来了，尝试在不打破下述规则的前提下将red span置于blue和green span元素之下：<br><br>    不改变HTML元素的标记<br>    不添加或者改变任何元素的z-index属性<br>    不添加或者改变任何元素的position属性<br>如果不了解z-index的一些特性，对于上述要求估计会有些烦恼。<br></p>
+
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p><br>在第一个div（也就是red span）上面添加一个值小于1的opacity属性，如下所示：<br></p>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">div:first-child &#123;</div><div class="line">  opacity: .99;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20161206110628073" alt="20161206110628073"></p>
+<p><br>可以看到opacity属性影响到了元素的堆叠顺序，这里就要说一下元素的堆叠顺序了。<br></p>
+
+<h2 id="堆叠顺序"><a href="#堆叠顺序" class="headerlink" title="堆叠顺序"></a>堆叠顺序</h2><p><br>在HTML文档中有一个不变的堆叠准则，任何一个元素都可以叠放在其他元素之上或者之下，决定元素叠放顺序的规则其实很清晰。<br><br>    当不包含z-index属性和position属性时，规则很简单，所有元素的叠放顺序与其所在HTML文档中出现的先后顺序一致。（当然使用负margin来重叠内联元素的特例除外。）<br><br>    当元素浮动float时，浮动块元素被放置于非定位块元素与定位块元素之间，具体的讲，浮动元素显示在普通流中的后代块元素之上，常规流中的后代行内元素之下。<br><br>    当加入position位置属性时，所有具有position属性的元素及其子元素会显示在其他不具有position属性的元素上面。（本文中具有position属性的元素指代的均是元素的position属性的值为除了static的其他值，如relative、absolute。）<br><br>    当引入z-index属性时，规则稍微变得复杂一点。<br>    1) z-index只在设置了position属性的元素上有效，没有position属性的元素上的z-index属性均不生效。<br>    2) z-index值会产生堆叠上下文。<br></p>
+
+<h2 id="堆叠上下文"><a href="#堆叠上下文" class="headerlink" title="堆叠上下文"></a>堆叠上下文</h2><p><br>拥有共同父元素的一组元素共同前移或者后移构成了一个堆叠上下文。每个堆叠上下文有一个单一的根元素，当元素上形成一个新的堆叠上下文时，堆叠上下文中的所有子元素按照堆叠顺序被局限在一个固定的区域内。一个堆叠上下文构成一个整体，其内部元素有相对不同的堆叠顺序，但与其他堆叠上下文比较时，只能整体上移或者下移。<br><br>通俗的讲，如果某个元素被置于其所在堆叠上下文的最底层，我们是没有办法让他显示在另一个拥有更高层的堆叠上下文元素之上的，哪怕你将其z-index设置为无限大。那构成一个堆叠上下文的规则是怎样的呢？有如下情况：<br><br>    文档的根元素<br><br>    元素拥有position属性（除static属性之外），同事设置了不为auto的z-index属性。<br><br>    元素拥有opacity属性，且取值小于1<br><br>    一些新的css属性，如filter、css-regions等需要离屏渲染的属性，均能使元素形成堆叠上下文。<br><br>    指定position:fixed的元素，技术z-index为auto。<br></p>
+
+<h2 id="同一堆叠上下文内子元素的堆叠顺序"><a href="#同一堆叠上下文内子元素的堆叠顺序" class="headerlink" title="同一堆叠上下文内子元素的堆叠顺序"></a>同一堆叠上下文内子元素的堆叠顺序</h2><p><br>从底层到上层依次为：<br><br>    堆叠上下文的根元素<br><br>    设置了position属性，并且z-index为负的元素及其子元素，z-index值较大的元素置于较小元素之上，同等属性值的元素按照html中出现的先后顺序堆叠。<br><br>    没有设置position的元素<br><br>    设置了position属性，并且z-index属性为auto的元素。<br><br>    设置了position属性，并且z-index属性为正值的元素。<br></p>
+
+<h2 id="不同堆叠上下文"><a href="#不同堆叠上下文" class="headerlink" title="不同堆叠上下文"></a>不同堆叠上下文</h2><p><br>    堆叠上下文可以嵌入其他堆叠上下文。<br><br>    每个堆叠上下文和他的统计上下文是独立的。<br><br>    堆叠上下文中子元素按照前述顺序摆放。<br><br>    堆叠上下文内部的子堆叠上下文的z-index只在父堆叠上下文中有意义。<br></p>
+
+
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><br>在阐述完堆叠上下文的形成、堆叠上下文之间的堆叠规则，堆叠上下文内的堆叠顺序后，让我们回到文章最开始的问题。<br>起初元素的叠放顺序如下：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;  //1</div><div class="line">  &lt;span class=&quot;red&quot;&gt;&lt;/span&gt;    //6</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div&gt;  //2</div><div class="line">  &lt;span class=&quot;green&quot;&gt;&lt;span&gt; //4</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div&gt;  //3</div><div class="line">  &lt;span class=&quot;blue&quot;&gt;&lt;/span&gt;  //5</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure><br><br><p><br>当添加属性opacity: 0.99后，第一个div形成了一个新的堆叠上下文，red span成为了新的上下文中的第一个子元素。元素结构变为：<br></p>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;  //1</div><div class="line">  &lt;span class=&quot;red&quot;&gt;&lt;/span&gt;    //1.1</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div&gt;  //2</div><div class="line">  &lt;span class=&quot;green&quot;&gt;&lt;span&gt; //4</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div&gt;  //3</div><div class="line">  &lt;span class=&quot;blue&quot;&gt;&lt;/span&gt;  //5</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>转载-&gt;<a href="http://blog.csdn.net/u014346301/article/details/53484968" target="_blank" rel="external">http://blog.csdn.net/u014346301/article/details/53484968</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/11/11/marquee/" style="float: left;">
+        ← html单个标签实现跑马灯效果
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/11/05/jsBug/">
+        JavaScript易错知识点整理 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/11/09/z-index/" data-title="说一说z-index容易被忽略的那些特性" data-url="http://yoursite.com/2016/11/09/z-index/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 郑勇. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4djW2NDX1NfQ1aGQkM_Cjow/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://www.weibo.com/6072801167/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

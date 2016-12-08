@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>一些有用CSS代码片段(二) | 剑出花残</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="剑出花残">
+    <meta name="author" content="郑勇">
+    <meta name="description" content="come on" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="剑出花残" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="https://zhengyong123.github.io/list/index.html" target="_BLANK" class="animsition-link">小练习</a></li>
+                    
+                        <li><a href="" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="" class="animsition-link">null</a></li>
+                    
+                    <li><a href="" class="animsition-link">null</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">剑出花残</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4djW2NDX1NfQ1aGQkM_Cjow/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://www.weibo.com/6072801167/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-11-17T08:45:22.000Z" itemprop="datePublished">
+          2016-11-17
+      </time>
+    
+</span>
+                <h1>一些有用CSS代码片段(二)</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="CSS3-斑马线"><a href="#CSS3-斑马线" class="headerlink" title="CSS3 斑马线"></a>CSS3 斑马线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tbody tr:nth-child(odd) &#123;</div><div class="line">    background-color: #ccc;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="大字段落"><a href="#大字段落" class="headerlink" title="大字段落"></a>大字段落</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">p:first-letter&#123;</div><div class="line">    display: block;</div><div class="line">    margin: 5px 0 0 5px;</div><div class="line">    float: left;</div><div class="line">    color: #ff3366;</div><div class="line">    font-size: 5.4em;</div><div class="line">    font-family: Georgia, Times New Roman, serif;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="内部CSS3-盒阴影"><a href="#内部CSS3-盒阴影" class="headerlink" title="内部CSS3 盒阴影"></a>内部CSS3 盒阴影</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#mydiv &#123; </div><div class="line">    -moz-box-shadow: inset 2px 0 4px #000;</div><div class="line">    -webkit-box-shadow: inset 2px 0 4px #000;</div><div class="line">    box-shadow: inset 2px 0 4px #000;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="外部CSS3-盒阴影"><a href="#外部CSS3-盒阴影" class="headerlink" title="外部CSS3 盒阴影"></a>外部CSS3 盒阴影</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#mydiv &#123; </div><div class="line">    -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);</div><div class="line">    -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);</div><div class="line">    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="三角形列表项目符号"><a href="#三角形列表项目符号" class="headerlink" title="三角形列表项目符号"></a>三角形列表项目符号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">ul &#123;</div><div class="line">    margin: 0.75em 0;</div><div class="line">    padding: 0 1em;</div><div class="line">    list-style: none;</div><div class="line">&#125;</div><div class="line">li:before &#123; </div><div class="line">    content: &quot;&quot;;</div><div class="line">    border-color: transparent #111;</div><div class="line">    border-style: solid;</div><div class="line">    border-width: 0.35em 0 0.35em 0.45em;</div><div class="line">    display: block;</div><div class="line">    height: 0;</div><div class="line">    width: 0;</div><div class="line">    left: -1em;</div><div class="line">    top: 0.9em;</div><div class="line">    position: relative;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="CSS3-列文本"><a href="#CSS3-列文本" class="headerlink" title="CSS3 列文本"></a>CSS3 列文本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#columns-3 &#123;</div><div class="line">    text-align: justify;</div><div class="line">    -moz-column-count: 3;</div><div class="line">    -moz-column-gap: 12px;</div><div class="line">    -moz-column-rule: 1px solid #c4c8cc;</div><div class="line">    -webkit-column-count: 3;</div><div class="line">    -webkit-column-gap: 12px;</div><div class="line">    -webkit-column-rule: 1px solid #c4c8cc;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="CSS固定页脚"><a href="#CSS固定页脚" class="headerlink" title="CSS固定页脚"></a>CSS固定页脚</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">#footer &#123;</div><div class="line">    position: fixed;</div><div class="line">    left: 0px;</div><div class="line">    bottom: 0px;</div><div class="line">    height: 30px;</div><div class="line">    width: 100%;</div><div class="line">    background: #444;</div><div class="line">&#125;</div><div class="line">/* IE 6 */</div><div class="line">* html #footer &#123;</div><div class="line">    position: absolute;</div><div class="line">    top: expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+&apos;px&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="IE6的PNG透明修复"><a href="#IE6的PNG透明修复" class="headerlink" title="IE6的PNG透明修复"></a>IE6的PNG透明修复</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">.bg &#123;</div><div class="line">    width:200px;</div><div class="line">    height:100px;</div><div class="line">    background: url(/folder/yourimage.png) no-repeat;</div><div class="line">    _background:none;</div><div class="line">    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&apos;/folder/yourimage.png&apos;,sizingMethod=&apos;crop&apos;);</div><div class="line">&#125;</div><div class="line">/* 1px gif method */</div><div class="line">img, .png &#123;</div><div class="line">    position: relative;</div><div class="line">    behavior: expression((this.runtimeStyle.behavior=&quot;none&quot;)&amp;&amp;(this.pngSet?this.pngSet=true:(this.nodeName == &quot;IMG&quot; &amp;&amp; this.src.toLowerCase().indexOf(&apos;.png&apos;)&gt;-1?(this.runtimeStyle.backgroundImage = &quot;none&quot;,</div><div class="line">       this.runtimeStyle.filter = &quot;progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&apos;&quot; + this.src + &quot;&apos;, sizingMethod=&apos;image&apos;)&quot;,</div><div class="line">       this.src = &quot;images/transparent.gif&quot;):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace(&apos;url(&quot;&apos;,&apos;&apos;).replace(&apos;&quot;)&apos;,&apos;&apos;),</div><div class="line">       this.runtimeStyle.filter = &quot;progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&apos;&quot; + this.origBg + &quot;&apos;, sizingMethod=&apos;crop&apos;)&quot;,</div><div class="line">       this.runtimeStyle.backgroundImage = &quot;none&quot;)),this.pngSet=true));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="CSS3-鲜艳的输入"><a href="#CSS3-鲜艳的输入" class="headerlink" title="CSS3 鲜艳的输入"></a>CSS3 鲜艳的输入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">input[type=text], textarea &#123;</div><div class="line">    -webkit-transition: all 0.30s ease-in-out;</div><div class="line">    -moz-transition: all 0.30s ease-in-out;</div><div class="line">    -ms-transition: all 0.30s ease-in-out;</div><div class="line">    -o-transition: all 0.30s ease-in-out;</div><div class="line">    outline: none;</div><div class="line">    padding: 3px 0px 3px 3px;</div><div class="line">    margin: 5px 1px 3px 0px;</div><div class="line">    border: 1px solid #ddd;</div><div class="line">&#125;</div><div class="line">input[type=text]:focus, textarea:focus &#123;</div><div class="line">    box-shadow: 0 0 5px rgba(81, 203, 238, 1);</div><div class="line">    padding: 3px 0px 3px 3px;</div><div class="line">    margin: 5px 1px 3px 0px;</div><div class="line">    border: 1px solid rgba(81, 203, 238, 1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="基于文件类型的链接样式"><a href="#基于文件类型的链接样式" class="headerlink" title="基于文件类型的链接样式"></a>基于文件类型的链接样式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">/* external links */</div><div class="line">a[href^=&quot;http://&quot;] &#123;</div><div class="line">    padding-right: 13px;</div><div class="line">    background: url(&apos;external.gif&apos;) no-repeat center right;</div><div class="line">&#125;</div><div class="line">/* emails */</div><div class="line">a[href^=&quot;mailto:&quot;] &#123;</div><div class="line">    padding-right: 20px;</div><div class="line">    background: url(&apos;email.png&apos;) no-repeat center right;</div><div class="line">&#125;</div><div class="line">/* pdfs */</div><div class="line">a[href$=&quot;.pdf&quot;] &#123;</div><div class="line">    padding-right: 18px;</div><div class="line">    background: url(&apos;acrobat.png&apos;) no-repeat center right;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="强制换行"><a href="#强制换行" class="headerlink" title="强制换行"></a>强制换行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">pre &#123;</div><div class="line">    white-space: pre-wrap;       /* css-3 */</div><div class="line">    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */</div><div class="line">    white-space: -pre-wrap;      /* Opera 4-6 */</div><div class="line">    white-space: -o-pre-wrap;    /* Opera 7 */</div><div class="line">    word-wrap: break-word;       /* Internet Explorer 5.5+ */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="网页顶部盒阴影"><a href="#网页顶部盒阴影" class="headerlink" title="网页顶部盒阴影"></a>网页顶部盒阴影</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">body:before &#123;</div><div class="line">    content: &quot;&quot;;</div><div class="line">    position: fixed;</div><div class="line">    top: -10px;</div><div class="line">    left: 0;</div><div class="line">    width: 100%;</div><div class="line">    height: 10px;</div><div class="line"></div><div class="line">    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);</div><div class="line">    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);</div><div class="line">    box-shadow: 0px 0px 10px rgba(0,0,0,.8);</div><div class="line">    z-index: 100;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="CSS3对话气泡"><a href="#CSS3对话气泡" class="headerlink" title="CSS3对话气泡"></a>CSS3对话气泡</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">.chat-bubble &#123;</div><div class="line">    background-color: #ededed;</div><div class="line">    border: 2px solid #666;</div><div class="line">    font-size: 35px;</div><div class="line">    line-height: 1.3em;</div><div class="line">    margin: 10px auto;</div><div class="line">    padding: 10px;</div><div class="line">    position: relative;</div><div class="line">    text-align: center;</div><div class="line">    width: 300px;</div><div class="line">    -moz-border-radius: 20px;</div><div class="line">    -webkit-border-radius: 20px;</div><div class="line">    -moz-box-shadow: 0 0 5px #888;</div><div class="line">    -webkit-box-shadow: 0 0 5px #888;</div><div class="line">    font-family: &apos;Bangers&apos;, arial, serif; </div><div class="line">&#125;</div><div class="line">.chat-bubble-arrow-border &#123;</div><div class="line">    border-color: #666 transparent transparent transparent;</div><div class="line">    border-style: solid;</div><div class="line">    border-width: 20px;</div><div class="line">    height: 0;</div><div class="line">    width: 0;</div><div class="line">    position: absolute;</div><div class="line">    bottom: -42px;</div><div class="line">    left: 30px;</div><div class="line">&#125;</div><div class="line">.chat-bubble-arrow &#123;</div><div class="line">    border-color: #ededed transparent transparent transparent;</div><div class="line">    border-style: solid;</div><div class="line">    border-width: 20px;</div><div class="line">    height: 0;</div><div class="line">    width: 0;</div><div class="line">    position: absolute;</div><div class="line">    bottom: -39px;</div><div class="line">    left: 30px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="H1-H5默认样式"><a href="#H1-H5默认样式" class="headerlink" title="H1-H5默认样式"></a>H1-H5默认样式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">h1,h2,h3,h4,h5&#123;</div><div class="line">    color: #005a9c;</div><div class="line">&#125;</div><div class="line">h1&#123;</div><div class="line">    font-size: 2.6em;</div><div class="line">    line-height: 2.45em;</div><div class="line">&#125;</div><div class="line">h2&#123;</div><div class="line">    font-size: 2.1em;</div><div class="line">    line-height: 1.9em;</div><div class="line">&#125;</div><div class="line">h3&#123;</div><div class="line">    font-size: 1.8em;</div><div class="line">    line-height: 1.65em;</div><div class="line">&#125;</div><div class="line">h4&#123;</div><div class="line">    font-size: 1.65em;</div><div class="line">    line-height: 1.4em;</div><div class="line">&#125;</div><div class="line">h5&#123;</div><div class="line">    font-size: 1.4em;</div><div class="line">    line-height: 1.25em;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="CSS悬浮提示文本"><a href="#CSS悬浮提示文本" class="headerlink" title="CSS悬浮提示文本"></a>CSS悬浮提示文本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line">a &#123; </div><div class="line">    border-bottom:1px solid #bbb;</div><div class="line">    color:#666;</div><div class="line">    display:inline-block;</div><div class="line">    position:relative;</div><div class="line">    text-decoration:none;</div><div class="line">&#125;</div><div class="line">a:hover,</div><div class="line">a:focus &#123;</div><div class="line">    color:#36c;</div><div class="line">&#125;</div><div class="line">a:active &#123;</div><div class="line">    top:1px; </div><div class="line">&#125;</div><div class="line">/* Tooltip styling */</div><div class="line">a[data-tooltip]:after &#123;</div><div class="line">    border-top: 8px solid #222;</div><div class="line">    border-top: 8px solid hsla(0,0%,0%,.85);</div><div class="line">    border-left: 8px solid transparent;</div><div class="line">    border-right: 8px solid transparent;</div><div class="line">    content: &quot;&quot;;</div><div class="line">    display: none;</div><div class="line">    height: 0;</div><div class="line">    width: 0;</div><div class="line">    left: 25%;</div><div class="line">    position: absolute;</div><div class="line">&#125;</div><div class="line">a[data-tooltip]:before &#123;</div><div class="line">    background: #222;</div><div class="line">    background: hsla(0,0%,0%,.85);</div><div class="line">    color: #f6f6f6;</div><div class="line">    content: attr(data-tooltip);</div><div class="line">    display: none;</div><div class="line">    font-family: sans-serif;</div><div class="line">    font-size: 14px;</div><div class="line">    height: 32px;</div><div class="line">    left: 0;</div><div class="line">    line-height: 32px;</div><div class="line">    padding: 0 15px;</div><div class="line">    position: absolute;</div><div class="line">    text-shadow: 0 1px 1px hsla(0,0%,0%,1);</div><div class="line">    white-space: nowrap;</div><div class="line">    -webkit-border-radius: 5px;</div><div class="line">    -moz-border-radius: 5px;</div><div class="line">    -o-border-radius: 5px;</div><div class="line">    border-radius: 5px;</div><div class="line">&#125;</div><div class="line">a[data-tooltip]:hover:after &#123;</div><div class="line">    display: block;</div><div class="line">    top: -9px;</div><div class="line">&#125;</div><div class="line">a[data-tooltip]:hover:before &#123;</div><div class="line">    display: block;</div><div class="line">    top: -41px;</div><div class="line">&#125;</div><div class="line">a[data-tooltip]:active:after &#123;</div><div class="line">    top: -10px;</div><div class="line">&#125;</div><div class="line">a[data-tooltip]:active:before &#123;</div><div class="line">    top: -42px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="深灰色的圆形按钮"><a href="#深灰色的圆形按钮" class="headerlink" title="深灰色的圆形按钮"></a>深灰色的圆形按钮</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">.graybtn &#123;</div><div class="line">    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;</div><div class="line">    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;</div><div class="line">    box-shadow:inset 0px 1px 0px 0px #ffffff;</div><div class="line">    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #d1d1d1) );</div><div class="line">    background:-moz-linear-gradient( center top, #ffffff 5%, #d1d1d1 100% );</div><div class="line">    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&apos;#ffffff&apos;, endColorstr=&apos;#d1d1d1&apos;);</div><div class="line">    background-color:#ffffff;</div><div class="line">    -moz-border-radius:6px;</div><div class="line">    -webkit-border-radius:6px;</div><div class="line">    border-radius:6px;</div><div class="line">    border:1px solid #dcdcdc;</div><div class="line">    display:inline-block;</div><div class="line">    color:#777777;</div><div class="line">    font-family:arial;</div><div class="line">    font-size:15px;</div><div class="line">    font-weight:bold;</div><div class="line">    padding:6px 24px;</div><div class="line">    text-decoration:none;</div><div class="line">    text-shadow:1px 1px 0px #ffffff;</div><div class="line">&#125;</div><div class="line">.graybtn:hover &#123;</div><div class="line">    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d1d1d1), color-stop(1, #ffffff) );</div><div class="line">    background:-moz-linear-gradient( center top, #d1d1d1 5%, #ffffff 100% );</div><div class="line">    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&apos;#d1d1d1&apos;, endColorstr=&apos;#ffffff&apos;);</div><div class="line">    background-color:#d1d1d1;</div><div class="line">&#125;</div><div class="line">.graybtn:active &#123;</div><div class="line">    position:relative;</div><div class="line">    top:1px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="CSS3-方格图案"><a href="#CSS3-方格图案" class="headerlink" title="CSS3 方格图案"></a>CSS3 方格图案</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">body &#123;</div><div class="line">    background: radial-gradient(circle, white 10%, transparent 10%),</div><div class="line">    radial-gradient(circle, white 10%, black 10%) 50px 50px;</div><div class="line">    background-size: 100px 100px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="CSS-font属性缩写"><a href="#CSS-font属性缩写" class="headerlink" title="CSS font属性缩写"></a>CSS font属性缩写</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">p &#123;</div><div class="line">  font: italic small-caps bold 1.2em/1.0em Arial, Tahoma, Helvetica;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="论文页面的卷曲效果"><a href="#论文页面的卷曲效果" class="headerlink" title="论文页面的卷曲效果"></a>论文页面的卷曲效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">ul.box &#123;</div><div class="line">    position: relative;</div><div class="line">    z-index: 1; /* prevent shadows falling behind containers with backgrounds */</div><div class="line">    overflow: hidden;</div><div class="line">    list-style: none;</div><div class="line">    margin: 0;</div><div class="line">    padding: 0; </div><div class="line">&#125;</div><div class="line"></div><div class="line">ul.box li &#123;</div><div class="line">    position: relative;</div><div class="line">    float: left;</div><div class="line">    width: 250px;</div><div class="line">    height: 150px;</div><div class="line">    padding: 0;</div><div class="line">    border: 1px solid #efefef;</div><div class="line">    margin: 0 30px 30px 0;</div><div class="line">    background: #fff;</div><div class="line">    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;</div><div class="line">    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; </div><div class="line">    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; </div><div class="line">&#125;</div><div class="line"></div><div class="line">ul.box li:before,</div><div class="line">ul.box li:after &#123;</div><div class="line">    content: &apos;&apos;;</div><div class="line">    z-index: -1;</div><div class="line">    position: absolute;</div><div class="line">    left: 10px;</div><div class="line">    bottom: 10px;</div><div class="line">    width: 70%;</div><div class="line">    max-width: 300px; /* avoid rotation causing ugly appearance at large container widths */</div><div class="line">    max-height: 100px;</div><div class="line">    height: 55%;</div><div class="line">    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);</div><div class="line">    -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);</div><div class="line">    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);</div><div class="line">    -webkit-transform: skew(-15deg) rotate(-6deg);</div><div class="line">    -moz-transform: skew(-15deg) rotate(-6deg);</div><div class="line">    -ms-transform: skew(-15deg) rotate(-6deg);</div><div class="line">    -o-transform: skew(-15deg) rotate(-6deg);</div><div class="line">    transform: skew(-15deg) rotate(-6deg); </div><div class="line">&#125;</div><div class="line"></div><div class="line">ul.box li:after &#123;</div><div class="line">    left: auto;</div><div class="line">    right: 10px;</div><div class="line">    -webkit-transform: skew(15deg) rotate(6deg);</div><div class="line">    -moz-transform: skew(15deg) rotate(6deg);</div><div class="line">    -ms-transform: skew(15deg) rotate(6deg);</div><div class="line">    -o-transform: skew(15deg) rotate(6deg);</div><div class="line">    transform: skew(15deg) rotate(6deg); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="鲜艳的锚链接"><a href="#鲜艳的锚链接" class="headerlink" title="鲜艳的锚链接"></a>鲜艳的锚链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">a &#123;</div><div class="line">    color: #00e;</div><div class="line">&#125;</div><div class="line">a:visited &#123;</div><div class="line">    color: #551a8b;</div><div class="line">&#125;</div><div class="line">a:hover &#123;</div><div class="line">    color: #06e;</div><div class="line">&#125;</div><div class="line">a:focus &#123;</div><div class="line">    outline: thin dotted;</div><div class="line">&#125;</div><div class="line">a:hover, a:active &#123;</div><div class="line">    outline: 0;</div><div class="line">&#125;</div><div class="line">a, a:visited, a:active &#123;</div><div class="line">    text-decoration: none;</div><div class="line">    color: #fff;</div><div class="line">    -webkit-transition: all .3s ease-in-out;</div><div class="line">&#125;</div><div class="line">a:hover, .glow &#123;</div><div class="line">    color: #ff0;</div><div class="line">    text-shadow: 0 0 10px #ff0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="带CSS3特色的横幅显示"><a href="#带CSS3特色的横幅显示" class="headerlink" title="带CSS3特色的横幅显示"></a>带CSS3特色的横幅显示</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">.featureBanner &#123;</div><div class="line">    position: relative;</div><div class="line">    margin: 20px</div><div class="line">&#125;</div><div class="line">.featureBanner:before &#123;</div><div class="line">    content: &quot;Featured&quot;;</div><div class="line">    position: absolute;</div><div class="line">    top: 5px;</div><div class="line">    left: -8px;</div><div class="line">    padding-right: 10px;</div><div class="line">    color: #232323;</div><div class="line">    font-weight: bold;</div><div class="line">    height: 0px;</div><div class="line">    border: 15px solid #ffa200;</div><div class="line">    border-right-color: transparent;</div><div class="line">    line-height: 0px;</div><div class="line">    box-shadow: -0px 5px 5px -5px #000;</div><div class="line">    z-index: 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.featureBanner:after &#123;</div><div class="line">    content: &quot;&quot;;</div><div class="line">    position: absolute;</div><div class="line">    top: 35px;</div><div class="line">    left: -8px;</div><div class="line">    border: 4px solid #89540c;</div><div class="line">    border-left-color: transparent;</div><div class="line">    border-bottom-color: transparent;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>转载-&gt;<a href="http://www.ido321.com/1565.html" target="_blank" rel="external">http://www.ido321.com/1565.html</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/11/15/cssPart/">
+        一些有用CSS代码片段(一) →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/11/17/cssPart2/" data-title="一些有用CSS代码片段(二)" data-url="http://yoursite.com/2016/11/17/cssPart2/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 郑勇. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4djW2NDX1NfQ1aGQkM_Cjow/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://www.weibo.com/6072801167/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
