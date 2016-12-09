@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>CSS三栏布局的四种方法 | 剑出花残</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="剑出花残">
+    <meta name="author" content="郑勇">
+    <meta name="description" content="come on" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="剑出花残" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="https://zhengyong123.github.io/list/index.html" target="_BLANK" class="animsition-link">小练习</a></li>
+                    
+                        <li><a href="" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="" class="animsition-link">null</a></li>
+                    
+                    <li><a href="" class="animsition-link">null</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">剑出花残</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4djW2NDX1NfQ1aGQkM_Cjow/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://www.weibo.com/6072801167/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-11-23T06:30:57.000Z" itemprop="datePublished">
+          2016-11-23
+      </time>
+    
+</span>
+                <h1>CSS三栏布局的四种方法</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><br>总括： 不管是三栏布局还是两栏布局都是我们在平时项目里经常使用的，也许你不知道什么事三栏布局什么是两栏布局但实际已经在用，或许你知道三栏布局的一种或两种方法，但实际操作中也只会依赖那某一种方法，本文具体的介绍了三栏布局的四种方法，并介绍了它的使用场景。<br></p>
+
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><br>所谓三栏布局就是指页面分为左中右三部分然后对中间一部分做自适应的一种布局方式。<br></p>
+
+<h3 id="1-绝对定位法"><a href="#1-绝对定位法" class="headerlink" title="1.绝对定位法"></a>1.绝对定位法</h3><p><br>HTML代码如下:<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt;Main&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt;</div></pre></td></tr></table></figure><br><br><p><br>CSS代码如下：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">//简单的进行CSS reset</div><div class="line">body,html&#123;</div><div class="line">    height:100%;</div><div class="line">    padding: 0px;</div><div class="line">    margin:0px;</div><div class="line">&#125;</div><div class="line">//左右绝对定位</div><div class="line">.left,.right&#123;</div><div class="line">    position: absolute;</div><div class="line">    top:0px;</div><div class="line">    background: red;</div><div class="line">    height:100%;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">    left:0;</div><div class="line">    width:100px;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">    right:0px;</div><div class="line">    width:200px;</div><div class="line">&#125;</div><div class="line">//中间使用margin空出左右元素所占据的空间</div><div class="line">.main&#123;</div><div class="line">    margin:0px 100px 0px 200px;</div><div class="line">    height:100%;</div><div class="line">    background: blue;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><p><br>该方法有个明显的缺点，就是如果中间栏含有最小宽度限制，或是含有宽度的内部元素，当浏览器宽度小到一定程度，会发生层重叠的情况。<br></p>
+
+<h2 id="2-圣杯布局"><a href="#2-圣杯布局" class="headerlink" title="2. 圣杯布局"></a>2. 圣杯布局</h2><p><br>HTML代码如下：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//注意元素次序</div><div class="line">&lt;div class=&quot;main&quot;&gt;Main&lt;/div&gt;</div><div class="line">&lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt;</div></pre></td></tr></table></figure><br><br><p><br>CSS代码如下：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">//习惯性的CSS reset</div><div class="line">body,html&#123;</div><div class="line">    height:100%;</div><div class="line">    padding: 0;</div><div class="line">    margin: 0</div><div class="line">&#125;</div><div class="line">//父元素body空出左右栏位</div><div class="line">body &#123;</div><div class="line">    padding-left: 100px;</div><div class="line">    padding-right: 200px;</div><div class="line">&#125;</div><div class="line">//左边元素更改</div><div class="line">.left &#123;</div><div class="line">    background: red;</div><div class="line">    width: 100px;</div><div class="line">    float: left;</div><div class="line">    margin-left: -100%;</div><div class="line">    position: relative;</div><div class="line">    left: -100px;</div><div class="line">    height: 100%;</div><div class="line">&#125;</div><div class="line">//中间部分</div><div class="line">.main &#123;</div><div class="line">    background: blue;</div><div class="line">    width: 100%;</div><div class="line">    height: 100%;</div><div class="line">    float: left;</div><div class="line">&#125;</div><div class="line">//右边元素定义</div><div class="line">.right &#123;</div><div class="line">    background: red;</div><div class="line">    width: 200px;</div><div class="line">    height: 100%;</div><div class="line">    float: left;</div><div class="line">    margin-left: -200px;</div><div class="line">    position: relative;</div><div class="line">    right: -200px;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><p><br>相关解释如下：<br><br>    (1)中间部分需要根据浏览器宽度的变化而变化，所以要用100%，这里设左中右向左浮动，因为中间100%，左层和右层根本没有位置上去<br>    (2)把左层margin负100后，发现left上去了，因为负到出窗口没位置了，只能往上挪<br>    (3)按第二步这个方法，可以得出它只要挪动窗口宽度那么宽就能到最左边了，利用负边距，把左右栏定位<br>    (4)但由于左右栏遮挡住了中间部分，于是采用相对定位方法，各自相对于自己把自己挪出去，得到最终结果<br></p>
+
+<h2 id="3-双飞翼布局"><a href="#3-双飞翼布局" class="headerlink" title="3. 双飞翼布局"></a>3. 双飞翼布局</h2><p><br>HTML代码如下：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot;&gt;</div><div class="line">        Main</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt;</div></pre></td></tr></table></figure><br><br><p><br>CSS代码如下：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">//CSS reset</div><div class="line">body,html &#123;</div><div class="line">    height:100%;</div><div class="line">    padding: 0;</div><div class="line">    margin: 0</div><div class="line">&#125;</div><div class="line">body &#123;</div><div class="line">    /*padding-left:100px;*/</div><div class="line">    /*padding-right:200px;*/</div><div class="line">&#125;</div><div class="line">.left &#123;</div><div class="line">    background: red;</div><div class="line">    width: 100px;</div><div class="line">    float: left;</div><div class="line">    margin-left: -100%;</div><div class="line">    height: 100%;</div><div class="line">    /*position: relative;*/</div><div class="line">    /*left:-100px;*/</div><div class="line">&#125;</div><div class="line">.main &#123;</div><div class="line">    background: blue;</div><div class="line">    width: 100%;</div><div class="line">    float: left;</div><div class="line">    height: 100%;</div><div class="line">&#125;</div><div class="line">.right &#123;</div><div class="line">    background: red;</div><div class="line">    width: 200px;</div><div class="line">    float: left;</div><div class="line">    margin-left: -200px;</div><div class="line">    height: 100%;</div><div class="line">    /*position:relative;*/</div><div class="line">    /*right:-200px;*/</div><div class="line">&#125;</div><div class="line">//新增inner元素</div><div class="line">.inner &#123;</div><div class="line">    margin-left: 100px;</div><div class="line">    margin-right: 200px;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><p><br>圣杯布局实际看起来是复杂的后期维护性也不是很高，在淘宝UED的探讨下，出来了一种新的布局方式就是双飞翼布局，代码如上。增加多一个div就可以不用相对布局了，只用到了浮动和负边距。和圣杯布局差异的地方已经被注释。<br></p>
+
+<h2 id="4-浮动"><a href="#4-浮动" class="headerlink" title="4. 浮动"></a>4. 浮动</h2><p><br>HTML代码如下：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//注意元素次序</div><div class="line">&lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt;Main&lt;/div&gt;</div></pre></td></tr></table></figure><br><br><p><br>CSS代码如下：<br></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//CSS reset</div><div class="line">body,html &#123;</div><div class="line">    height:100%;</div><div class="line">    padding: 0;</div><div class="line">    margin: 0</div><div class="line">&#125;</div><div class="line">//左栏左浮动</div><div class="line">.left &#123;</div><div class="line">    background: red;</div><div class="line">    width: 100px;</div><div class="line">    float: left;</div><div class="line">    height: 100%;</div><div class="line">&#125;</div><div class="line">//中间自适应</div><div class="line">.main &#123;</div><div class="line">    background: blue;</div><div class="line">    height: 100%;</div><div class="line">    margin:0px 100px 200px 0px;</div><div class="line">&#125;</div><div class="line">//右栏右浮动</div><div class="line">.right &#123;</div><div class="line">    background: red;</div><div class="line">    width: 200px;</div><div class="line">    float: right;</div><div class="line">    height: 100%;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><p><br>这种方式代码足够简洁与高效，也容易理解<br></p>
+
+
+<p>转载-&gt;<a href="https://gold.xitu.io/post/58481bf8ac502e006ce8c361" target="_blank" rel="external">https://gold.xitu.io/post/58481bf8ac502e006ce8c361</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/11/17/cssPart2/">
+        一些有用CSS代码片段(二) →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/11/23/cssLayout/" data-title="CSS三栏布局的四种方法" data-url="http://yoursite.com/2016/11/23/cssLayout/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 郑勇. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4djW2NDX1NfQ1aGQkM_Cjow/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://www.weibo.com/6072801167/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
