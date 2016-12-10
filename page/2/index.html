@@ -231,6 +231,262 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2016/11/15/cssPart/">一些有用CSS代码片段(一)</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-11-15T13:20:32.000Z" itemprop="datePublished">
+          2016-11-15
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        垂直对齐如果你用CSS，则你会有困惑：我该怎么垂直对齐容器中的元素？现在，利用CSS3的Transform，可以很优雅的解决这个困惑：1234567.verticalcenter&#123;    position: relative;    top: 50%;    -webkit-transform: translateY(-50%);    -o-transform: translateY(-50%);    transform:
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/11/15/cssPart/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/11/11/marquee/">html单个标签实现跑马灯效果</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-11-11T12:48:42.000Z" itemprop="datePublished">
+          2016-11-11
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        marquee标签，它是成对出现的标签，首标签&lt;marquee&gt;和尾标签&lt;/marquee&gt;之间的内容就是滚动内容。marquee标签的属性主要有behavior、bgcolor、direction、width、height、hspace、vspace、loop、scrollamount、scrolldelay等，它们都是可选的。
+
+behavior属性behavior属性的参数值为alternate、scrol
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/11/11/marquee/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/11/09/z-index/">说一说z-index容易被忽略的那些特性</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-11-09T12:30:11.000Z" itemprop="datePublished">
+          2016-11-09
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        问题HTML文档中有三个div元素，每个div中存在一个span元素，三个span元素分别设置背景颜色为red，green，以及blue。然后每个span都设置为position: absolute，三个span的位置稍微错开以便可以仔细观察它们之间的堆叠顺序。然后将第一个span元素的z-index设置为1，其他两个不设置。具体代码如下：
+
+12345678910111213141516171819202122232425262728
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/11/09/z-index/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/11/05/jsBug/">JavaScript易错知识点整理</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-11-05T06:44:14.000Z" itemprop="datePublished">
+          2016-11-05
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1.变量作用域12345678var a = 1;function test() &#123;    var a = 2;    console.log(a); // 2&#125;test();
+上方的函数作用域中声明并赋值了a，且在console之上，所以遵循就近原则输出a等于2。
+
+12345678var a = 1;function test2() &#123;    console.log(a); // undefined  
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/11/05/jsBug/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/11/02/jsObject/">JavaScript面向对象与原型</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-11-02T07:46:33.000Z" itemprop="datePublished">
+          2016-11-02
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript-面向对象/'>JavaScript,面向对象</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        工厂模式：无法识别对象123456789101112131415function createObject(name, age) &#123; //集中实例化的函数　　var obj = new Object();　　obj.name = name;　　obj.age = age;　　obj.run = function () &#123;　　　　return this.name + this.age + &apos;运行中...&ap
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/11/02/jsObject/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/10/31/cssCube/">css正方体滚动</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-10-31T11:37:14.000Z" itemprop="datePublished">
+          2016-10-31
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        HTML12345678910111213141516171819202122232425&lt;!DOCTYPE html&gt;&lt;html&gt;	&lt;head&gt;		&lt;meta charset=&quot;utf-8&quot;&gt;		&lt;title&gt;立方体&lt;/title&gt;	&lt;/head&gt;	&lt;body&gt;		&lt;div class=&quot;eyes&quo
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/10/31/cssCube/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/10/28/MathSuiji/">Math随机数做双色球</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-10-28T08:07:55.000Z" itemprop="datePublished">
+          2016-10-28
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        HTML12345678910111213141516171819&lt;!DOCTYPE html&gt;&lt;html&gt;	&lt;head&gt;		&lt;meta charset=&quot;utf-8&quot;&gt;		&lt;title&gt;&lt;/title&gt;	&lt;/head&gt;	&lt;body&gt;		&lt;div class=&quot;wrap&quot;&gt;			&lt;in
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/10/28/MathSuiji/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/10/26/canvasXiong/">canvas绘制熊本熊</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-10-26T06:36:27.000Z" itemprop="datePublished">
+          2016-10-26
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        从网上看到一个用canvas绘制的熊本熊
+HTML &amp; CSS12	&lt;!-- html文件 --&gt;&lt;canvas class=&quot;kumamon&quot; id=&quot;kumamon&quot; width=&quot;500&quot; height=&quot;500&quot;&gt;kumamon
+    为了清楚地看到画布位置，我们来给画布加个黑色边框：
+
+1234/*css文件*/.
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/10/26/canvasXiong/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2016/10/25/jsmianshi/">一道常被人轻视的前端JS面试题</a></h3>
                     <span>
                         <span class="post-meta">
@@ -282,251 +538,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2016/10/22/jsCopy/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/10/18/clss/">Javascript定义类（class）的三种方法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-10-18T11:57:46.000Z" itemprop="datePublished">
-          2016-10-18
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        在面向对象编程中，类（class）是对象（object）的模板，定义了同一组对象（又称”实例”）共有的属性和方法。Javascript语言不支持”类”，但是可以用一些变通的方法，模拟出”类”。一、构造函数法这是经典方法，也是教科书必教的方法。它用构造函数模拟”类”，在其内部用this关键字指代实例对象。　　Cat() &#123;12　　　　this.name = &quot;大毛&quot;;　　&#125;
-生成实例的时候，使用ne
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/10/18/clss/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/10/15/canvasClock/">canvas动画时钟</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-10-15T06:10:24.000Z" itemprop="datePublished">
-          2016-10-15
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        开始用canvas实现这个逼格满满的时钟吧。在html代码中插入canvas标签1&lt;canvas id=&quot;canvas&quot; width=&quot;400&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
-设置好css样式123456789101112html, body &#123;   width: 100%;   height: 100%;   margin: 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/10/15/canvasClock/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/10/10/javascript/">JavaScript奇技淫巧44招</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-10-10T03:21:09.000Z" itemprop="datePublished">
-          2016-10-10
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        JavaScript是一个绝冠全球的编程语言，可用于Web开发、移动应用开发（PhoneGap、Appcelerator）、服务器端开发（Node.js和Wakanda）等等。JavaScript还是很多新手踏入编程世界的第一个语言。既可以用来显示浏览器中的简单提示框，也可以通过nodebot或nodruino来控制机器人。能够编写结构清晰、性能高效的JavaScript代码的开发人员，现如今已成了招聘市场最受追捧的人1、首次为变量赋值
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/10/10/javascript/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/10/06/qiqiaoban/">canvas绘制七巧板</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-10-06T11:08:15.000Z" itemprop="datePublished">
-          2016-10-06
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        HTML123456789101112&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;	&lt;meta charset=&quot;utf-8&quot;&gt;	&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;	&lt;canvas width=&quot;800&quot; height=&quot;800&quot; id=&quo
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/10/06/qiqiaoban/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/10/03/canvas/">canvas基础使用</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-10-03T09:26:50.000Z" itemprop="datePublished">
-          2016-10-03
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        HTML1234567891011121314151617181920212223&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;	&lt;meta charset=&quot;utf-8&quot;&gt;	&lt;title&gt;&lt;/title&gt;	&lt;style type=&quot;text/css&quot;&gt;		#canvas&#123;			display: 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/10/03/canvas/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/09/29/this/">this对象</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-09-29T06:06:38.000Z" itemprop="datePublished">
-          2016-09-29
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1.纯粹的函数调用
-12345function test()&#123;      	this.x = 1;       alert(this.x);   &#125;   test();//1
-2.函数作为某个对象的方法进行调用，这是this就指向这个上级的对象。
-12345678function test()   &#123;       alert(this.x);   &#125;   var o = &#123;&#125;;
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/09/29/this/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/09/22/jcstyle/">JS设置CSS样式的几种方式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-09-22T11:21:21.000Z" itemprop="datePublished">
-          2016-09-22
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        用JS来动态设置CSS样式，常见的有以下几种1. 直接设置style的属性  某些情况用这个设置 !important值无效如果属性有’-‘号，就写成驼峰的形式（如textAlign）  如果想保留 - 号，就中括号的形式  = '100px';1element.style.height = &apos;100px&apos;;2. 直接设置属性（只能用于某些属性，相关样式会自动识别）100);1element.setAttribute
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/09/22/jcstyle/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/09/15/shuzu/">js数组排序与去重</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-09-15T12:06:31.000Z" itemprop="datePublished">
-          2016-09-15
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        冒泡排序：从数组中随便拿一个数与后一位比较，如果前者比后者大，那么两者交换位置，从而遍历数组可以得到排序的效果arr = [1, 9, 4, 50, 49, 6, 3, 2];1234567891011121314function test()&#123;  for (var i = 0; i &lt; arr.length - 1; i++)&#123;    for (var j = i + 1; j &lt; arr.length
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/09/15/shuzu/">Read More...</a>
                     </p>
                     
                 </div>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>js中利用cookie实现记住密码功能 | 剑出花残</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="剑出花残">
+    <meta name="author" content="郑勇">
+    <meta name="description" content="come on" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="剑出花残" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="https://zhengyong123.github.io/list/index.html" target="_BLANK" class="animsition-link">小练习</a></li>
+                    
+                        <li><a href="" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="" class="animsition-link">null</a></li>
+                    
+                    <li><a href="" class="animsition-link">null</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">剑出花残</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4djW2NDX1NfQ1aGQkM_Cjow/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://www.weibo.com/6072801167/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-12-13T07:33:39.000Z" itemprop="datePublished">
+          2016-12-13
+      </time>
+    
+</span>
+                <h1>js中利用cookie实现记住密码功能</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>在登录界面添加记住密码功能，我首先想到的是在java后台中调用cookie存放账号密码，大致如下：</p>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">HttpServletRequest request  </div><div class="line">HttpServletResponse response</div><div class="line">Cookie username = <span class="keyword">new</span> Cookie(<span class="string">"username "</span>,<span class="string">"cookievalue"</span>);</div><div class="line">Cookie password = <span class="keyword">new</span> Cookie(<span class="string">"password "</span>,<span class="string">"cookievalue"</span>);</div><div class="line">response.addCookie(username );</div><div class="line">response.addCookie(password );</div></pre></td></tr></table></figure>
+<p>但是为安全起见，我们在后台获取的密码大多是在js中通过MD5加密后的密文，如果将密文放到cookie中，在js中获取到也没有作用；<br>然后考虑在js中存取cookie，代码如下：</p>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置cookie</span></div><div class="line"> <span class="keyword">var</span> passKey = <span class="string">'4c05c54d952b11e691d76c0b843ea7f9'</span>;</div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">cname, cvalue, exdays</span>) </span>&#123;</div><div class="line">     <span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">     d.setTime(d.getTime() + (exdays*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>));</div><div class="line">     <span class="keyword">var</span> expires = <span class="string">"expires="</span>+d.toUTCString();</div><div class="line">      <span class="built_in">document</span>.cookie = cname + <span class="string">"="</span> + encrypt(<span class="built_in">escape</span>(cvalue), passKey) + <span class="string">"; "</span> + expires;</div><div class="line"> &#125;</div><div class="line">  <span class="comment">//获取cookie</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">cname</span>) </span>&#123;</div><div class="line">     <span class="keyword">var</span> name = cname + <span class="string">"="</span>;</div><div class="line">     <span class="keyword">var</span> ca = <span class="built_in">document</span>.cookie.split(<span class="string">';'</span>);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;ca.length; i++) &#123;</div><div class="line">         <span class="keyword">var</span> c = ca[i];</div><div class="line">         <span class="keyword">while</span> (c.charAt(<span class="number">0</span>)==<span class="string">' '</span>) c = c.substring(<span class="number">1</span>);</div><div class="line">        <span class="keyword">if</span> (c.indexOf(name) != <span class="number">-1</span>)&#123;</div><div class="line">           <span class="keyword">var</span> cnameValue = <span class="built_in">unescape</span>(c.substring(name.length, c.length));</div><div class="line">           <span class="keyword">return</span> decrypt(cnameValue, passKey);</div><div class="line">         &#125; </div><div class="line">     &#125;</div><div class="line">     <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line"> &#125;</div><div class="line"> <span class="comment">//清除cookie  </span></div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">clearCookie</span>(<span class="params">cname</span>) </span>&#123;  </div><div class="line">     setCookie(cname, <span class="string">""</span>, <span class="number">-1</span>);  </div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p></p><p>setCookie(cname, cvalue, exdays)三个参数分别是存放的cookie名字、cookie值、cookie有效天数</p><p></p>
+<p></p><p>由于cookie中不能包含等号、空格、分号等特殊字符，我在设置cookie时使用escape() 函数对字符串进行编码，获取cookie时使用unescape()函数解码。但是escape()函数不会对 ASCII 字母和数字进行编码，所以存放到cookie中的账号、密码是以明文存放的，不安全。于是上网找了一个对字符串加密解密算法，该算法需要传两个参数，一个需要加密的字符串，一个自定义加密密钥passKey。设置cookie时使用encrypt(value, passkey)加密，读取cookie时使用decrypt(value, passKey)解密，该算法附在本文最后。</p><p></p>
+<p></p><p>存取cookie方法的调用：</p><p></p>
+<h4 id="1、定义checkbox"><a href="#1、定义checkbox" class="headerlink" title="1、定义checkbox"></a>1、定义checkbox</h4><pre><code>&lt;input type=&quot;checkbox&quot; id=&quot;rememberMe&quot; checked=&quot;checked&quot;/&gt;记住密码
+</code></pre><h4 id="2、判断帐号密码输入无误后调用"><a href="#2、判断帐号密码输入无误后调用" class="headerlink" title="2、判断帐号密码输入无误后调用"></a>2、判断帐号密码输入无误后调用</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>($(<span class="string">'#rememberMe'</span>).is(<span class="string">':checked'</span>))&#123;</div><div class="line">         setCookie(<span class="string">'customername'</span>, $(<span class="string">'#username'</span>).val().trim(), <span class="number">7</span>)</div><div class="line">        setCookie(<span class="string">'customerpass'</span>, $(<span class="string">'#password'</span>).val().trim(), <span class="number">7</span>)</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+<h4 id="3、进入登录界面后，判断cookie中是否有帐号密码，如果有就自动填充"><a href="#3、进入登录界面后，判断cookie中是否有帐号密码，如果有就自动填充" class="headerlink" title="3、进入登录界面后，判断cookie中是否有帐号密码，如果有就自动填充"></a>3、进入登录界面后，判断cookie中是否有帐号密码，如果有就自动填充</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">//获取cookie</span></div><div class="line">  <span class="keyword">var</span> cusername = getCookie(<span class="string">'customername'</span>);</div><div class="line">  <span class="keyword">var</span> cpassword = getCookie(<span class="string">'customerpass'</span>);</div><div class="line">  <span class="keyword">if</span>(cusername != <span class="string">""</span> &amp;&amp; cpassword != <span class="string">""</span>)&#123;</div><div class="line">    $(<span class="string">"#username"</span>).val(cusername);</div><div class="line">    $(<span class="string">"#password"</span>).val(cpassword);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 最后附上字符串加密解密算法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">eval</span>(<span class="function"><span class="keyword">function</span>(<span class="params">p,a,c,k,e,r</span>)</span>&#123;e=<span class="function"><span class="keyword">function</span>(<span class="params">c</span>)</span>&#123;<span class="keyword">return</span>(c&lt;a?<span class="string">''</span>:e(<span class="built_in">parseInt</span>(c/a)))+((c=c%a)&gt;<span class="number">35</span>?<span class="built_in">String</span>.fromCharCode(c+<span class="number">29</span>):c.toString(<span class="number">36</span>))&#125;;<span class="keyword">if</span>(!<span class="string">''</span>.replace(<span class="regexp">/^/</span>,<span class="built_in">String</span>))&#123;<span class="keyword">while</span>(c--)r[e(c)]=k[c]||e(c);k=[<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">return</span> r[e]&#125;];e=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span><span class="string">'\\w+'</span>&#125;;c=<span class="number">1</span>&#125;;<span class="keyword">while</span>(c--)<span class="keyword">if</span>(k[c])p=p.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'\\b'</span>+e(c)+<span class="string">'\\b'</span>,<span class="string">'g'</span>),k[c]);<span class="keyword">return</span> p&#125;(<span class="string">'A G(a,b)&#123;x(b==v||b.7&lt;=0)&#123;D.y("z R P O");t v&#125;6 c="";s(6 i=0;i&lt;b.7;i++)&#123;c+=b.u(i).n()&#125;6 d=m.r(c.7/5);6 e=l(c.9(d)+c.9(d*2)+c.9(d*3)+c.9(d*4)+c.9(d*5));6 f=m.M(b.7/2);6 g=m.B(2,C)-1;x(e&lt;2)&#123;D.y("L K J z");t v&#125;6 h=m.F(m.H()*N)%I;c+=h;w(c.7&gt;q)&#123;c=(l(c.o(0,q))+l(c.o(q,c.7))).n()&#125;c=(e*c+f)%g;6 j="";6 k="";s(6 i=0;i&lt;a.7;i++)&#123;j=l(a.u(i)^m.r((c/g)*E));x(j&lt;p)&#123;k+="0"+j.n(p)&#125;Q k+=j.n(p);c=(e*c+f)%g&#125;h=h.n(p);w(h.7&lt;8)h="0"+h;k+=h;t k&#125;A S(a,b)&#123;6 c="";s(6 i=0;i&lt;b.7;i++)&#123;c+=b.u(i).n()&#125;6 d=m.r(c.7/5);6 e=l(c.9(d)+c.9(d*2)+c.9(d*3)+c.9(d*4)+c.9(d*5));6 f=m.F(b.7/2);6 g=m.B(2,C)-1;6 h=l(a.o(a.7-8,a.7),p);a=a.o(0,a.7-8);c+=h;w(c.7&gt;q)&#123;c=(l(c.o(0,q))+l(c.o(q,c.7))).n()&#125;c=(e*c+f)%g;6 j="";6 k="";s(6 i=0;i&lt;a.7;i+=2)&#123;j=l(l(a.o(i,i+2),p)^m.r((c/g)*E));k+=T.U(j);c=(e*c+f)%g&#125;t k&#125;'</span>,<span class="number">57</span>,<span class="number">57</span>,<span class="string">'||||||var|length||charAt||||||||||||parseInt|Math|toString|substring|16|10|floor|for|return|charCodeAt|null|while|if|log|key|function|pow|31|console|255|round|encrypt|random|100000000|the|change|plesae|ceil|1000000000|empty|be|else|cannot|decrypt|String|fromCharCode'</span>.split(<span class="string">'|'</span>),<span class="number">0</span>,&#123;&#125;))</div></pre></td></tr></table></figure></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/12/15/jsShoping/" style="float: left;">
+        ← 原生JS实现购物车
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/12/10/cssHieght/">
+        css中input与button高度不一致的原因及解决方法 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/12/13/jscookie/" data-title="js中利用cookie实现记住密码功能" data-url="http://yoursite.com/2016/12/13/jscookie/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 郑勇. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4djW2NDX1NfQ1aGQkM_Cjow/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://www.weibo.com/6072801167/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
