@@ -1,0 +1,621 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 1302px;
+}
+
+.warp {
+  width: 100%;
+  height: 255px;
+}
+
+.warp .head {
+  height: 40px;
+  width: 1302px;
+  margin: 0 auto;
+  line-height: 40px;
+}
+
+.warp .head .left {
+  float: left;
+  height: 40px;
+  width: 250px;
+  font-size: 20px;
+  color: #989898;
+}
+
+.warp .head .right {
+  float: right;
+  width: 205px;
+  height: 40px;
+}
+
+.warp .head .right .text {
+  float: left;
+  font-size: 16px;
+  color: #989898;
+  width: 50px;
+  margin: 0 37px;
+}
+
+.warp .head .right .gouwu {
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-right: 40px;
+}
+
+.warp .head .goin {
+  float: right;
+  width: 105px;
+  font-size: 16px;
+  color: #989898;
+  margin-right: 90px;
+  text-align: center;
+  color: #989898;
+}
+
+.warp .head .goin a {
+  text-decoration: none;
+  color: #989898;
+}
+
+.warp .head .goin .shu {
+  border-right: 1px solid #989898;
+  border-left: 1px solid #989898;
+  margin: 0 5px;
+}
+
+.warp .log {
+  width: 1302px;
+  height: 164px;
+  margin: 0 auto;
+}
+
+.warp .mulu {
+  width: 750px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.warp .mulu div {
+  float: left;
+  height: 40px;
+  margin-right: 140px;
+  line-height: 40px;
+}
+
+.warp .mulu div a {
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.warp .mulu .right {
+  margin-right: 0px;
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+}
+
+.login .kuang {
+  width: 600px;
+  height: 765px;
+  margin: auto auto;
+}
+
+.login .kuang .top {
+  position: absolute;
+  top: 50px;
+  z-index: 6;
+  width: 600px;
+  height: 694px;
+  background-color: white;
+}
+
+.login .kuang .top .xia {
+  width: 520px;
+  height: 270px;
+  margin: 0 auto;
+}
+
+.login .kuang .top .xia span {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login .kuang .top .xia button {
+  width: 520px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  border: 1px solid #eeeeee;
+}
+
+.login .kuang .top .xia .bottom1 {
+  background-color: white;
+  width: 516px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.login .kuang .top .xia .bottom2 {
+  background-color: mediumpurple;
+}
+
+.login .kuang .top .xia .bottom3 {
+  background-color: lightyellow;
+}
+
+.login .kuang .top .xia .bottom4 {
+  background-color: white;
+}
+
+.login .kuang .bottom {
+  width: 600px;
+  height: 55px;
+  margin-top: 760px;
+  background-color: black;
+  position: absolute;
+  z-index: 6;
+}
+
+.login .kuang .bottom a {
+  color: white;
+  display: block;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+}
+
+.login .kuang .bottom a:hover {
+  color: red;
+}
+
+.loging {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+}
+
+.loging .kuang {
+  width: 600px;
+  height: 765px;
+  margin: auto auto;
+}
+
+.loging .kuang .shang {
+  position: absolute;
+  top: 50px;
+  z-index: 6;
+  width: 600px;
+  height: 694px;
+  background-color: white;
+}
+
+.loging .kuang .shang .entry {
+  width: 520px;
+  height: 270px;
+  margin: 0 auto;
+}
+
+.loging .kuang .shang .entry button {
+  width: 520px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  border: 1px solid #eeeeee;
+}
+
+.loging .kuang .shang .entry .bottom2 {
+  background-color: #c4a9b8;
+  color: white;
+}
+
+.loging .kuang .shang .entry .bottom3 {
+  background-color: lightyellow;
+}
+
+.loging .kuang .shang .entry .bottom4 {
+  background-color: white;
+}
+
+.loging .kuang .shang .entry h3 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.loging .kuang .shang .entry h4 {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.loging .kuang .shang .entry h4 a {
+  color: #444444;
+}
+
+.loging .kuang .shang .entry h4 a:hover {
+  color: #E55C3D;
+}
+
+.loging .kuang .shang .entry span {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.loging .kuang .shang .entry input {
+  background-color: white;
+  width: 516px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.loging .kuang .xia {
+  width: 600px;
+  height: 55px;
+  margin-top: 760px;
+  background-color: black;
+  position: absolute;
+  z-index: 6;
+}
+
+.loging .kuang .xia a {
+  color: white;
+  display: block;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+}
+
+.loging .kuang .xia a:hover {
+  color: red;
+}
+
+.logining {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+}
+
+.logining .kuang {
+  width: 600px;
+  height: 580px;
+  margin: auto auto;
+  background-color: white;
+  margin-top: 100px;
+}
+
+.logining .kuang .entry {
+  width: 520px;
+  height: 360px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.logining .kuang .entry button {
+  width: 520px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  border: 1px solid #eeeeee;
+}
+
+.logining .kuang .entry span {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.logining .kuang .entry input {
+  background-color: white;
+  width: 516px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.tu {
+  width: 100%;
+  height: 540px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tu ul, .tu li {
+  list-style: none;
+}
+
+.tu ul {
+  width: 1680px;
+  height: 540px;
+  margin: 0 auto;
+}
+
+.tu ul li {
+  width: 1680px;
+  height: 540px;
+  position: absolute;
+  left: 50%;
+  margin-left: -840px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.tu ul li:nth-child(1) {
+  background: blue;
+  opacity: 1;
+}
+
+.tu ul li:nth-child(2) {
+  background: yellow;
+}
+
+.tu ul li:nth-child(3) {
+  background: purple;
+}
+
+.tu ol {
+  width: 120px;
+  position: absolute;
+  top: 510px;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tu ol li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  float: left;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.tu ol li:nth-child(1) {
+  background-color: red;
+}
+
+.content {
+  width: 1302px;
+  margin: 0 auto;
+}
+
+.content .shuang {
+  width: 100%;
+  padding-top: 112px;
+  height: 1192px;
+}
+
+.content .shuang .title {
+  width: 100%;
+  height: 75px;
+  font-size: 26px;
+  color: #989898;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.content .shuang .bao div {
+  height: 450px;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 100px;
+}
+
+.content .shuang .bao div a {
+  text-decoration: none;
+}
+
+.content .shuang .bao div span {
+  display: block;
+  font-size: 20px;
+  color: #989898;
+  text-align: center;
+  width: 407px;
+  margin-top: 22px;
+}
+
+.content .dan {
+  width: 100%;
+  height: 1188px;
+}
+
+.content .dan .title {
+  width: 100%;
+  height: 75px;
+  font-size: 26px;
+  color: #989898;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.content .dan .bao div {
+  height: 450px;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 100px;
+}
+
+.content .dan .bao div a {
+  text-decoration: none;
+}
+
+.content .dan .bao div span {
+  display: block;
+  font-size: 20px;
+  color: #989898;
+  text-align: center;
+  width: 407px;
+  margin-top: 22px;
+}
+
+.content .xi {
+  width: 100%;
+  height: 705px;
+}
+
+.content .xi .title {
+  width: 100%;
+  height: 75px;
+  font-size: 26px;
+  color: #989898;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.content .xi .bao div {
+  height: 450px;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 100px;
+}
+
+.content .xi .bao div a {
+  text-decoration: none;
+}
+
+.content .xi .bao div span {
+  display: block;
+  font-size: 20px;
+  color: #989898;
+  text-align: center;
+  width: 407px;
+  margin-top: 22px;
+}
+
+.foot {
+  height: 250px;
+  max-width: 1684px;
+  border-top: 2px solid #989898;
+  margin: 0 auto;
+}
+
+.foot .bing {
+  width: 1302px;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+
+.foot .bing div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.foot .bing .left {
+  width: 60px;
+  margin-left: 450px;
+}
+
+.foot .bing .left ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.foot .bing .left ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #7e7c7d;
+}
+
+.foot .bing .left ul .top {
+  margin-bottom: 15px;
+}
+
+.foot .bing .left ul .top a {
+  color: #989898;
+}
+
+.foot .bing .zhong {
+  width: 60px;
+  margin-left: 115px;
+}
+
+.foot .bing .zhong ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.foot .bing .zhong ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #7e7c7d;
+}
+
+.foot .bing .zhong ul .top {
+  margin-bottom: 15px;
+}
+
+.foot .bing .zhong ul .top a {
+  color: #989898;
+}
+
+.foot .bing .right {
+  width: 60px;
+  margin-left: 120px;
+}
+
+.foot .bing .right ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.foot .bing .right ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #7e7c7d;
+}
+
+.foot .bing .right ul .top {
+  margin-bottom: 15px;
+}
+
+.foot .bing .right ul .top a {
+  color: #989898;
+}

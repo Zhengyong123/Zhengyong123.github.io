@@ -60,6 +60,10 @@
 			ul li:nth-child(4){
 				background-color: yellow;
 			}
+
+
+
+
 			.warp{
 				width: 800px;
 				height: 60px;
@@ -71,7 +75,7 @@
 				line-height: 60px;
 				font-size: 30px;
 			}
-			.left{
+			.left-up{
 				width: 250px;
 				background: lightyellow;
 			}
@@ -79,9 +83,82 @@
 				width: 300px;
 				background: lightblue;
 			}
-			.right{
+			.right-up{
 				width: 250px;
 				background: lightpink;
+			}
+
+			.tab{
+				width: 520px;
+				height: 280px;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.tu{
+				width: 520px;
+				height: 280px;
+				position: relative;
+			}
+			.tu li{
+				width: 520px;
+				height: 280px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				transition: 1.5s;
+				opacity: 0;
+			}
+			.tu .onclick{
+				opacity: 1;
+			}
+
+			.dian{
+				width: 100px;
+				height: 30px;
+				position: absolute;
+				left: 50%;
+				bottom: 20px;
+				margin-left: -50px;
+			}
+			.dian li{
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background-color: #999;
+				float: left;
+				margin: 5px;
+				color: white;
+				cursor: pointer;
+				font-size: 10px;
+				text-align: center;
+				line-height: 17px;
+			}
+			.dian .onclick{
+				background-color: black;
+			}
+			.but{
+				cursor: pointer;
+				display: block;
+				position: absolute;
+				top: 50%;
+				margin-top: -30px;	
+				width: 30px;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				background-color: rgba(20,20,20,0.3);
+				color: white;
+				display: none;
+			}
+			.right{
+				right: 0;
+			}
+			.right:hover{
+				background-color: rgba(20,20,20,0.6);
+			}
+			.left:hover{
+				background-color: rgba(20,20,20,0.6);
 			}
 		</style>
 	</head>
@@ -118,10 +195,45 @@
 				</ul>
 			</div>
 			<div class="warp">
-				<div class="left">⬅️</div>
+				<div class="left-up">⬅️</div>
 				<div class="on">⏸</div>
-				<div class="right">➡️</div>
+				<div class="right-up">➡️</div>
 			</div>
+		</div>
+		<div class="tab">
+			<ul class="tu">
+				<li class="onclick">
+					<a href="https://zhengyong123.github.io/list/jc/index.html">
+						<span style="position: absolute;left: 200px;top: 80px; color: red;">云流量</span>
+						<img src="https://aecpm.alicdn.com/simba/img/TB1ooxjJFXXXXXEXpXXSutbFXXX.jpg" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="https://zhengyong123.github.io/list/shangcheng/html/index.html">
+						<span style="position: absolute;left: 200px;top: 80px; color: red;">商城</span>
+						<img src="https://img.alicdn.com/tps/TB1FCV7LpXXXXbeXXXXXXXXXXXX-520-280.jpg" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="https://zhengyong123.github.io/list/jingyingba/html/index.html">
+						<span style="position: absolute;left: 200px;top: 80px; color: red;">商城</span>
+						<img src="https://img.alicdn.com/tps/TB1p3pPLpXXXXbUXFXXXXXXXXXX-520-280.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://aecpm.alicdn.com/simba/img/TB11DEfJVXXXXXvXXXXSutbFXXX.jpg" alt="">
+					</a>
+				</li>
+			</ul>
+			<ul class="dian">
+				<li class="onclick"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<span class="but left">&lt</span>
+			<span class="but right">&gt</span>
 		</div>
 		<p></p>
 		<p></p>
@@ -195,5 +307,82 @@
 				timer1 = setInterval(fn1,20);
 			}
 		}
+		var dian = all(".dian li");
+		var tu = all(".tu li");
+		var left = ll(".left");
+		var right = ll(".right");
+		var index = 0;
+		var length = tu.length;
+		var but = all(".but");
+		var tab = ll(".tab");
+		var timer = null;
+		function ll(x){
+				return document.querySelector(x);
+			}
+		function all(x){
+				return document.querySelectorAll(x);
+			}
+
+		tab.onmouseover = function(){
+			but[0].style.display = "block";
+			but[1].style.display = "block";
+			clearInterval(timer);
+		}
+		tab.onmouseout = function(){
+			but[0].style.display = "";
+			but[1].style.display = "";
+			timer = setInterval(xiaYiGe,3000);
+		}
+
+		for (var i = 0;i<dian.length;i++) {
+			dian[i].index = i;
+			dian[i].innerHTML = i+1;
+			dian[i].onmouseover = function() {
+				clearInterval(timer);
+				for(var i = 0;i<dian.length;i++){
+					dian[i].className="";
+					tu[i].className="";
+				}
+				index = this.index;
+				dian[this.index].className="onclick";
+				tu[this.index].className="onclick";
+			}
+			}
+		right.onclick=function(){
+			clearInterval(timer);
+			xiaYiGe();
+			}
+		function xiaYiGe(){
+				index ++;
+				if(index > dian.length-1){
+					index = 0;
+				}
+				for(var i = 0;i<dian.length;i++){
+						dian[i].className = "";
+						tu[i].className = "";
+
+				}
+				dian[index].className="onclick";
+				tu[index].className="onclick";
+			}
+
+		left.onclick= function(){
+			clearInterval(timer);
+			shangYiGe();
+			}
+		function shangYiGe(){
+			index --;
+			if (index<0) {
+				index = tu.length -1;
+			}
+			for(var i = 0;i<dian.length;i++){
+				dian[i].className="";
+				tu[i].className="";
+			}
+			dian[index].className="onclick";
+			tu[index].className="onclick";
+		}
+
+		timer = setInterval(xiaYiGe,3000);
 	</script>
 </html>
